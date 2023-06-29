@@ -1,0 +1,42 @@
+
+// COLORS
+$color-white:#FFFFFF;
+$color-cream:#EFFFFA;
+$color-lithg:#E5ECF4;
+$color-purple-litgh:#C3BEF7;
+$color-purple:#8A4FFF;
+
+// MIXINS
+@mixin size($wid,$heid){
+    width: $wid;
+    height: $heid;
+}
+
+@mixin caja_flex($flex,$alig,$justy){
+    display: $flex;
+    align-items: $alig;
+    justify-content: $justy;
+}
+
+@mixin font($size,$weid){
+    font-size: $size;
+    font-weight: $weid;
+}
+
+
+
+//GENERALES
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family:  'Nunito Sans', sans-serif;
+
+}
+
+// SIZES
+
+
