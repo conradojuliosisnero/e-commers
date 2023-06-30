@@ -11,13 +11,14 @@ body {
   width: 100%;
   height: 100px;
   background-color: transparent;
-  position: relative;
+  position: fixed;
+  z-index: 1;
   display: flex;
   justify-content: flex-end;
   transition: background-color 0.2s ease;
 }
 .nav:hover {
-  background-color: #C3BEF7;
+  background-color: #FFFFFF;
 }
 .nav .menu {
   display: flex;
@@ -60,7 +61,7 @@ body {
   border: none;
   outline: none;
   border-radius: 10px;
-  background-color: #C3BEF7;
+  background-color: #EFFFFA;
   width: 100px;
   height: 60px;
   position: relative;
@@ -93,4 +94,47 @@ body {
 }
 .nav .btn__login:hover {
   background-color: #FFFFFF;
+}
+
+.banner__principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 650px;
+  background-image: url(../img/banner.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.banner__principal .btn__banner {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 220px);
+  padding: 10px 60px;
+  border-radius: 30px;
+  border: solid #FFFFFF 2px;
+  margin: 0px 10px;
+  transition: background-color 0.4s ease;
+}
+.banner__principal .btn__banner:nth-child(2) {
+  left: 55%;
+}
+.banner__principal .btn__banner a {
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: color 0.4s ease;
+}
+.banner__principal .btn__banner:hover {
+  background-color: #FFFFFF;
+}
+.banner__principal .btn__banner:hover a {
+  color: #333333;
 }/*# sourceMappingURL=style.css.map */
