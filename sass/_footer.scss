@@ -1,0 +1,29 @@
+.footer{
+    @include caja_flex(flex,center,space-around);
+    @include size(100%,300px);
+    flex-wrap: wrap;
+    .contend__listas__footer{
+        display: flex;
+        .menus__footer{
+            margin: 0;
+            position: relative;
+            list-style: none;
+            .list__footer{
+                display: block;
+                position: relative;
+                margin: 0;
+                padding: 2px 10px;
+                cursor: pointer;
+                transition:transform .3s ease-in;
+                &:hover{
+                    transform:translateX(10px);
+                }
+                a{
+                    text-decoration: none;
+                    color: #000000;
+                    @include font(1em,300);
+                }
+            }
+        }
+    }
+}
