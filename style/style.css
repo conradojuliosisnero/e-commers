@@ -1,1 +1,68 @@
-/*# sourceMappingURL=style.css.map */
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100px;
+  background-color: #E5ECF4;
+  position: relative;
+  display: flex;
+}
+.container-fluid .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container-fluid .menu .menu__list {
+  margin: 0px 5px;
+  position: relative;
+  overflow: hidden;
+}
+.container-fluid .menu .menu__list a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+.container-fluid .menu .menu__list i {
+  color: #333333;
+  font-size: 1.3em;
+  padding: 10px;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+}
+.container-fluid .btn__login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  width: 100px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.container-fluid .btn__login span {
+  position: absolute;
+  transition: left 0.5s ease;
+}
+.container-fluid .btn__login .icon {
+  position: absolute;
+  left: -50px;
+}
+.container-fluid .btn__login:hover span {
+  left: 10px;
+}/*# sourceMappingURL=style.css.map */

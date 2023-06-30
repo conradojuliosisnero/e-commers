@@ -1,3 +1,54 @@
-.container-fluid{
+.container-fluid {
+  @include size(100%, 100px);
+  background-color: $color-lithg;
+  position: relative;
+  display: flex;
+  .menu {
+    @include caja_flex(flex, center, center);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    .menu__list {
+      margin: 0px 5px;
+      position: relative;
+      overflow: hidden;
+      a {
+        text-decoration: none;
+        color: #333333;
+        @include font(1.1em, 400);
+      }
+      i {
+        color: #333333;
+        font-size: 1.3em;
+        padding: 10px;
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+      }
+    }
+  }
+
+  .btn__login{
+    @include caja_flex(flex,center,center);
+    @include btn($color-white);
+    @include size(100px,60px);
+    position: relative;
+    overflow: hidden;
+    transition: .5s ease;
+    
+    span{
+        position: absolute;
+        transition: left .5s ease;
+    }
+    .icon{
+        position: absolute;
+        left: -50px;
+    }
+    &:hover span{
+        left: 10px;
+    }
+
+  }
+
 
 }

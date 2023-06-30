@@ -23,6 +23,13 @@ $color-purple:#8A4FFF;
     font-weight: $weid;
 }
 
+@mixin btn($bg){
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: $bg;
+}
+
 
 
 //GENERALES
