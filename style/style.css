@@ -48,12 +48,15 @@ body {
   border: none;
   outline: none;
   border-radius: 10px;
-  background-color: #FFFFFF;
+  background-color: #C3BEF7;
   width: 100px;
   height: 60px;
-  position: relative;
+  position: fixed;
   overflow: hidden;
   transition: 0.5s ease;
+  left: unset;
+  right: 30px;
+  top: 20px;
 }
 .container-fluid .btn__login span {
   position: absolute;
@@ -62,7 +65,15 @@ body {
 .container-fluid .btn__login .icon {
   position: absolute;
   left: -50px;
+  color: #333333;
+  transition: left 0.5s ease;
 }
 .container-fluid .btn__login:hover span {
   left: 10px;
+}
+.container-fluid .btn__login:hover .icon {
+  left: 70px;
+}
+.container-fluid .btn__login:hover {
+  background-color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */

@@ -30,13 +30,14 @@
 
   .btn__login{
     @include caja_flex(flex,center,center);
-    @include btn($color-white);
+    @include btn($color-purple-litgh);
     @include size(100px,60px);
-    position: relative;
+    position: fixed;
     overflow: hidden;
     transition: .5s ease;
-    
-    
+    left: unset;
+    right: 30px;
+    top: 20px;
     span{
         position: absolute;
         transition: left .5s ease;
@@ -44,9 +45,17 @@
     .icon{
         position: absolute;
         left: -50px;
+        color: #333333;
+        transition: left .5s ease;
     }
     &:hover span{
         left: 10px;
+    }
+    &:hover .icon{
+      left: 70px;
+    }
+    &:hover{
+      background-color: $color-white;
     }
 
   }
