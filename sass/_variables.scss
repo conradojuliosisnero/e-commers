@@ -5,6 +5,7 @@ $color-cream:#EFFFFA;
 $color-lithg:#E5ECF4;
 $color-purple-litgh:#C3BEF7;
 $color-purple:#8A4FFF;
+$color-green-litgh:#447046;
 
 // MIXINS
 @mixin size($wid,$heid){
@@ -41,8 +42,17 @@ $color-purple:#8A4FFF;
 
 body{
     font-family:  'Nunito Sans', sans-serif;
-
+    ::-webkit-scrollbar{
+        width:10px ;
+    }
 }
+body::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $color-purple-litgh; /* Color de la barra de desplazamiento */
+  }
 
 // SIZES
 

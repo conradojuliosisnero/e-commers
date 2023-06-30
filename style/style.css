@@ -6,24 +6,34 @@
 body {
   font-family: "Nunito Sans", sans-serif;
 }
+body ::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #C3BEF7; /* Color de la barra de desplazamiento */
+}
 
 .nav {
-  width: 100%;
-  height: 100px;
-  background-color: transparent;
-  position: fixed;
+  position: absolute;
   z-index: 100;
   display: flex;
   justify-content: flex-end;
-  transition: background-color 0.2s ease;
+  background-color: transparent;
 }
 .nav:hover {
-  background-color: #FFFFFF;
+  background-color: #EFFFFA;
 }
 .nav .menu {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100px;
   position: relative;
   list-style: none;
   margin: 0;
@@ -38,13 +48,10 @@ body {
 }
 .nav .menu .menu__list a {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
   font-size: 1.1em;
   font-weight: 600;
   transition: color 0.3s ease-out;
-}
-.nav .menu .menu__list a:hover {
-  color: #C3BEF7;
 }
 .nav .menu .menu__list i {
   color: #333333;
@@ -64,7 +71,7 @@ body {
   background-color: transparent;
   width: 100px;
   height: 60px;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   left: unset;
   right: 30px;
@@ -77,7 +84,7 @@ body {
   transition: left 0.5s ease;
 }
 .nav .btn__login span a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 }
 .nav .btn__login .icon {
@@ -93,10 +100,7 @@ body {
   left: 70px;
 }
 .nav .btn__login:hover {
-  background-color: #EFFFFA;
-}
-.nav:hover .menu > a {
-  color: #333333;
+  background-color: #FFFFFF;
 }
 
 .banner__principal {
@@ -108,6 +112,19 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+}
+.banner__principal .leyenda {
+  display: flex;
+  position: absolute;
+  bottom: calc(50% - 100px);
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #FFFFFF;
+  z-index: 5;
+  transition: color 0.3s ease;
+}
+.banner__principal .leyenda:hover {
+  color: #C3BEF7;
 }
 .banner__principal .btn__banner {
   border: none;
@@ -136,7 +153,7 @@ body {
   transition: color 0.4s ease;
 }
 .banner__principal .btn__banner:hover {
-  background-color: #FFFFFF;
+  background-color: #EFFFFA;
 }
 .banner__principal .btn__banner:hover a {
   color: #333333;

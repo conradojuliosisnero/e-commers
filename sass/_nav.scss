@@ -1,21 +1,20 @@
+
 .nav {
-  @include size(100%, 100px);
-  background-color: transparent;
-  position: fixed;
+  position: absolute;
   z-index: 100;
   display: flex;
   justify-content: flex-end;
-  transition:background-color .2s ease ;
+  background-color: transparent;
   &:hover{
-    background-color: $color-white;
+    background-color: $color-cream;
   }
   .menu {
     @include caja_flex(flex, center, center);
+    @include size(100%,100px);
     position: relative;
     list-style: none;
     margin: 0;
     padding: 0;
-    
     .menu__list {
       margin: 0px 5px;
       position: relative;
@@ -24,12 +23,9 @@
       cursor: pointer;
       a {
         text-decoration: none;
-        color: #ffffff;
+        color: #000000;
         @include font(1.1em, 600);
         transition: color .3s ease-out;
-        &:hover{
-          color: $color-purple-litgh;
-        }
       }
       i {
         color: #333333;
@@ -46,7 +42,7 @@
     @include caja_flex(flex,center,center);
     @include btn(transparent);
     @include size(100px,60px);
-    position: relative;
+    position: absolute;
     overflow: hidden;
     left: unset;
     right: 30px;
@@ -57,7 +53,7 @@
         position: absolute;
         transition: left .5s ease;
         a{
-          color: #ffffff;
+          color: #000000;
           text-decoration: none;
         }
     }
@@ -74,12 +70,9 @@
       left: 70px;
     }
     &:hover{
-      background-color: $color-cream;
+      background-color: $color-white;
     }
 
-  }
-  &:hover .menu > a{
-    color: #333333;
   }
 
 }

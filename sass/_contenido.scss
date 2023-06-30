@@ -3,7 +3,19 @@
     @include size(100%,650px);
     background-size: cover;
     background-position: center;
-    position: relative;  
+    position: relative;
+    .leyenda{
+        display: flex;
+        position: absolute;
+        bottom: calc(50% - 100px);
+        @include font(2.5em,700);
+        color:$color-white;
+        z-index: 5;
+        transition: color .3s ease;
+        &:hover{
+            color: $color-purple-litgh;
+        }
+    }  
     .btn__banner{
         @include btn(transparent);
         @include caja_flex(flex,center,center);
@@ -25,7 +37,7 @@
             transition: color .4s ease;
         }
         &:hover{
-            background-color: $color-white;
+            background-color: $color-cream;
         }
         &:hover a{
             color: #333333;
