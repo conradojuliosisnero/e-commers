@@ -2,7 +2,7 @@
   @include size(100%, 100px);
   background-color: transparent;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   display: flex;
   justify-content: flex-end;
   transition:background-color .2s ease ;
@@ -24,8 +24,8 @@
       cursor: pointer;
       a {
         text-decoration: none;
-        color: #333333;
-        @include font(1.1em, 400);
+        color: #ffffff;
+        @include font(1.1em, 600);
         transition: color .3s ease-out;
         &:hover{
           color: $color-purple-litgh;
@@ -44,7 +44,7 @@
 
   .btn__login{
     @include caja_flex(flex,center,center);
-    @include btn($color-cream);
+    @include btn(transparent);
     @include size(100px,60px);
     position: relative;
     overflow: hidden;
@@ -57,7 +57,7 @@
         position: absolute;
         transition: left .5s ease;
         a{
-          color: #333333;
+          color: #ffffff;
           text-decoration: none;
         }
     }
@@ -74,10 +74,12 @@
       left: 70px;
     }
     &:hover{
-      background-color: $color-white;
+      background-color: $color-cream;
     }
 
   }
-
+  &:hover a{
+    color: #333333;
+  }
 
 }

@@ -1,7 +1,6 @@
 .banner__principal{
     @include caja_flex(flex,center,center);
     @include size(100%,650px);
-    background-image: url(../img/banner.png);
     background-size: cover;
     background-position: center;
     position: relative;  
@@ -9,13 +8,14 @@
         @include btn(transparent);
         @include caja_flex(flex,center,center);
         position: absolute;
-        bottom: 0;
+        bottom: 30px;
         left: calc(50% - 220px);
         padding: 10px 60px;
         border-radius: 30px;
         border: solid $color-white 2px;
         margin: 0px 10px;
         transition: background-color .4s ease;
+        z-index: 3;
         &:nth-child(2){
             left: 55%;
         }
@@ -32,3 +32,30 @@
         }
     }
 }
+
+.banner{
+    background-size: cover;
+    background-position: center;
+    &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(360deg, #181818 0%, #222222 7%, transparent 89%);
+        @include size(100%,100%);
+        z-index: 0;
+    }
+}
+
+.uno{
+    background-image: url(../img/img-1.jpg); 
+    @extend .banner;
+    height: 100vh;
+}.dos{
+    background-image: url(../img/img-2.jpg);
+    @extend .banner;
+}.tres{
+    background-image: url(../img/img-4.jpg);
+    @extend .banner;
+}
+
