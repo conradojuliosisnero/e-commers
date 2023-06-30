@@ -1,28 +1,37 @@
-.container-fluid {
+.nav {
   @include size(100%, 100px);
   background-color: $color-lithg;
   position: relative;
   display: flex;
+  justify-content: flex-end;
   .menu {
     @include caja_flex(flex, center, center);
+    position: relative;
     list-style: none;
     margin: 0;
     padding: 0;
+    
     .menu__list {
       margin: 0px 5px;
       position: relative;
       overflow: hidden;
+      padding: 0px 30px;
+      cursor: pointer;
       a {
         text-decoration: none;
         color: #333333;
         @include font(1.1em, 400);
+        transition: color .3s ease-out;
+        &:hover{
+          color: $color-purple-litgh;
+        }
       }
       i {
         color: #333333;
         font-size: 1.3em;
         padding: 10px;
         position: absolute;
-        bottom: -30px;
+        bottom: -40px;
         left: 0;
       }
     }
@@ -32,15 +41,20 @@
     @include caja_flex(flex,center,center);
     @include btn($color-purple-litgh);
     @include size(100px,60px);
-    position: fixed;
+    position: relative;
     overflow: hidden;
-    transition: .5s ease;
     left: unset;
     right: 30px;
     top: 20px;
+    margin-left: 30px;
+    transition:background-color .3s ease ;
     span{
         position: absolute;
         transition: left .5s ease;
+        a{
+          color: #333333;
+          text-decoration: none;
+        }
     }
     .icon{
         position: absolute;
