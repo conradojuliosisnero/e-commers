@@ -1,9 +1,13 @@
 .nav {
   @include size(100%, 100px);
-  background-color: $color-lithg;
+  background-color: transparent;
   position: relative;
   display: flex;
   justify-content: flex-end;
+  transition:background-color .2s ease ;
+  &:hover{
+    background-color: $color-purple-litgh;
+  }
   .menu {
     @include caja_flex(flex, center, center);
     position: relative;
