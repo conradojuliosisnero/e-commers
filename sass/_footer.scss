@@ -1,9 +1,10 @@
 .footer{
     @include caja_flex(flex,center,space-around);
     @include size(100%,300px);
-    flex-wrap: wrap;
+    position: relative;
     .contend__listas__footer{
         display: flex;
+        width: 100%;
         .menus__footer{
             margin: 0;
             position: relative;
@@ -22,6 +23,23 @@
                     text-decoration: none;
                     color: #000000;
                     @include font(1em,300);
+                }
+            }
+        }
+    }
+    .terminos{
+        @include caja_flex(flex,center,center);
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        .terminos__links{
+            display: block;
+            padding: 0px 20px;
+            a{
+                text-decoration:none;
+                color: $color-green-litgh;
+                &:hover{
+                    text-decoration: underline;
                 }
             }
         }

@@ -7,6 +7,7 @@
     .leyenda{
         display: flex;
         position: absolute;
+        padding: 25px;
         bottom: calc(50% - 100px);
         @include font(2.5em,700);
         color:$color-white;
@@ -15,7 +16,10 @@
         &:hover{
             color: $color-purple-litgh;
         }
-    }  
+    } 
+    .content__btn{
+        width: 100%;
+        flex-wrap: wrap;
     .btn__banner{
         @include btn(transparent);
         @include caja_flex(flex,center,center);
@@ -40,9 +44,10 @@
             background-color: $color-cream;
         }
         &:hover a{
-            color: #333333;
+            color: $color-green-litgh;
         }
     }
+}
 }
 
 .banner{
