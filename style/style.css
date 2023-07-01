@@ -39,6 +39,7 @@ body::-webkit-scrollbar-thumb {
 }
 .nav .tittle__nav span a {
   color: #1b1b1b;
+  text-decoration: none;
   font-size: 1.5em;
   font-weight: 500;
 }
@@ -298,6 +299,12 @@ body::-webkit-scrollbar-thumb {
   body .nav .btn__login {
     border: solid 2px #FFFFFF;
     right: 10px;
+  }
+  body .nav .tittle__nav a {
+    color: #1b1b1b;
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: 500;
   }
   body .banner__principal .content__btn {
     flex-direction: column;
