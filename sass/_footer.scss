@@ -8,7 +8,7 @@
         width: 100%;
         .leyenda__footer{
             @include caja_flex(flex,center,center);
-            width: 100%;
+            width: calc(50%);
             span{
                 color: #a2a2a2;
             }
@@ -33,23 +33,6 @@
                         text-decoration: underline 1px;
                         
                     }
-                }
-            }
-        }
-    }
-    .terminos{
-        @include caja_flex(flex,center,center);
-        position: absolute;
-        bottom: 10px;
-        width: 100%;
-        .terminos__links{
-            display: block;
-            padding: 0px 20px;
-            a{
-                text-decoration:none;
-                color: $color-green-litgh;
-                &:hover{
-                    text-decoration: underline;
                 }
             }
         }
