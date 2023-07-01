@@ -3,8 +3,14 @@
     @include size(100%,300px);
     position: relative;
     .contend__listas__footer{
-        display: flex;
+        @include caja_flex(flex,center,center);
+        flex-direction: column;
         width: 100%;
+        .leyenda__footer{
+            @include caja_flex(flex,center,center);
+            width: 100%;
+
+        }
         .menus__footer{
             margin: 0;
             position: relative;
@@ -16,13 +22,14 @@
                 padding: 2px 10px;
                 cursor: pointer;
                 transition:transform .3s ease-in;
-                &:hover{
-                    transform:translateX(10px);
-                }
                 a{
                     text-decoration: none;
                     color: #000000;
                     @include font(1em,300);
+                    &:hover{
+                        text-decoration: underline 1px;
+                        
+                    }
                 }
             }
         }

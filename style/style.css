@@ -202,6 +202,15 @@ body::-webkit-scrollbar-thumb {
 }
 .footer .contend__listas__footer {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.footer .contend__listas__footer .leyenda__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 .footer .contend__listas__footer .menus__footer {
@@ -217,14 +226,15 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   transition: transform 0.3s ease-in;
 }
-.footer .contend__listas__footer .menus__footer .list__footer:hover {
-  transform: translateX(10px);
-}
 .footer .contend__listas__footer .menus__footer .list__footer a {
   text-decoration: none;
   color: #000000;
   font-size: 1em;
   font-weight: 300;
+}
+.footer .contend__listas__footer .menus__footer .list__footer a:hover {
+  -webkit-text-decoration: underline 1px;
+          text-decoration: underline 1px;
 }
 .footer .terminos {
   display: flex;
