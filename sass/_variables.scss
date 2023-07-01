@@ -1,11 +1,16 @@
 
 // COLORS
 $color-white:#FFFFFF;
+$color-black:#1b1b1b;
 $color-cream:#EFFFFA;
 $color-lithg:#E5ECF4;
 $color-purple-litgh:#C3BEF7;
 $color-purple:#8A4FFF;
 $color-green-litgh:#447046;
+$color-green-second:#bce5be;
+$color-yellow:#e6bd4c;
+$color-pink-litgh:#fa5ba5;
+$color-blue-litgh:#a8f8ff;
 
 // MIXINS
 @mixin size($wid,$heid){
@@ -51,7 +56,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: $color-purple-litgh; /* Color de la barra de desplazamiento */
+    background-color: $color-green-second; /* Color de la barra de desplazamiento */
   }
 
 // SIZES
