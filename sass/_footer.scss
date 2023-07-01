@@ -2,7 +2,7 @@
     @include caja_flex(flex,center,space-around);
     @include size(100%,300px);
     position: relative;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     .contend__listas__footer{
         @include caja_flex(flex,center,center);
         flex-direction: column;
@@ -10,7 +10,9 @@
         .leyenda__footer{
             @include caja_flex(flex,center,center);
             width: 100%;
-
+            span{
+                color: #a2a2a2;
+            }
         }
         .menus__footer{
             margin: 0;

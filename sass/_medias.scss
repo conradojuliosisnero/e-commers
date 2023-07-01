@@ -1,8 +1,12 @@
-@media screen and (max-width:435px) {
+@media screen and (max-width:725px) {
     body{
         .nav{
             .menu{
                 display: none;
+            }
+            .btn__login{
+                border: solid 2px $color-white;
+                right: 10px;
             }
         }
         .banner__principal{
@@ -14,8 +18,9 @@
             }
         }
         .footer{
+            flex-wrap: wrap;
             .contend__listas__footer{
-                padding: 25px 0px;
+                padding: 30px 0px;
                 justify-content: flex-start;
                 width: 100%;
                 .leyenda__footer{
