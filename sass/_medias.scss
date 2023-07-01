@@ -1,9 +1,32 @@
 @media screen and (max-width:435px) {
     body{
+        .nav{
+            .menu{
+                display: none;
+            }
+        }
         .banner__principal{
             .content__btn{
                 flex-direction: column;
-                
+                .btn__banner{
+                    margin: 7px 0px;
+                }
+            }
+        }
+        .footer{
+            .contend__listas__footer{
+                padding: 25px 0px;
+                justify-content: flex-start;
+                width: 100%;
+                .leyenda__footer{
+                    justify-content: flex-start;
+                    padding: 0px 10px;
+                }
+                .menus__footer{
+                    width: 100%;
+                    padding: 0;
+                    justify-content: flex-start;
+                }
             }
         }
     }
