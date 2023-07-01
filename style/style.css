@@ -193,7 +193,7 @@ body::-webkit-scrollbar-thumb {
   left: calc(50% - 220px);
   padding: 10px 60px;
   border-radius: 30px;
-  border: solid #FFFFFF 2px;
+  border: solid #FFFFFF 1px;
   margin: 0px 10px;
   transition: background-color 0.4s ease;
   z-index: 3;
