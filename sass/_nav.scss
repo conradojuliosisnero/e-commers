@@ -23,9 +23,22 @@
       cursor: pointer;
       a {
         text-decoration: none;
-        color: #000000;
-        @include font(1.1em, 600);
+        color: #4b4b4b;
+        @include font(1.1em, 300);
+        overflow: hidden;
         transition: color .3s ease-out;
+        &::after{
+          content: '';
+          position: absolute;
+          left: -130px;
+          bottom: 0;
+          @include size(100%,1px);
+          background-color: #333333;
+          transition: left .3s ease;
+        }
+        &:hover::after{
+          left: 0;
+        }
       }
       i {
         color: #333333;
@@ -53,7 +66,7 @@
         position: absolute;
         transition: left .5s ease;
         a{
-          color: #000000;
+          color: #4b4b4b;
           text-decoration: none;
         }
     }
