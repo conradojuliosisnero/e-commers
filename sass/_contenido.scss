@@ -18,12 +18,14 @@
         }
     } 
     .content__btn{
+        @include caja_flex(flex,center,center);
         width: 100%;
-        flex-wrap: wrap;
+        position: absolute;
+        bottom: 20px;
     .btn__banner{
         @include btn(transparent);
         @include caja_flex(flex,center,center);
-        position: absolute;
+        // position: absolute;
         bottom: 30px;
         left: calc(50% - 220px);
         padding: 10px 60px;
