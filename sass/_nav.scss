@@ -8,6 +8,19 @@
   &:hover{
     background-color: $color-cream;
   }
+  .tittle__nav{
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    span{
+      position: relative;
+      width: 100%;
+     a{
+      color:$color-black;
+      @include font(1.5em,500);
+     }
+    }
+  }
   .menu {
     @include caja_flex(flex, center, center);
     @include size(100%,100px);
