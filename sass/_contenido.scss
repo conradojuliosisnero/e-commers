@@ -13,8 +13,8 @@
         color:$color-white;
         z-index: 5;
         transition: color .3s ease;
-        &:hover{
-            color: $color-purple-litgh;
+        &:nth-child(2){
+            color:$color-pink-litgh;
         }
     } 
     .content__btn{
