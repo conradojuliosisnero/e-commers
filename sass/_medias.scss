@@ -1,110 +1,186 @@
-@media screen and (max-width:1024px) {
-    body{
-        .nav{
-            .btn__login{
-                border: solid 2px $color-white;
-                right: 10px;
-            }
-            .tittle__nav{
-                top: 35px;
-                 a{
-                  color:$color-black;
-                  text-decoration: none;
-                  @include font(1.1em,500);
-                 }
-                }
-            }
-}
+@media screen and (max-width: 1024px) {
+  body {
+    .nav {
+      .btn__login {
+        border: solid 2px $color-white;
+        right: 10px;
+      }
+
+      .tittle__nav {
+        top: 35px;
+
+        a {
+          color: $color-black;
+          text-decoration: none;
+          @include font(1.1em, 500);
+        }
+      }
+    }
+  }
 }
 
-@media screen and (max-width:775px) {
-    body{
-        .nav{
-            .btn__login{
-                border: solid 2px $color-white;
-                right: 10px;
-            }
-            .tittle__nav{
-                 a{
-                  color:$color-black;
-                  text-decoration: none;
-                 }
-                }
-            }
-        
-        .banner__principal{
-            .content__btn{
-                flex-direction: column;
-                .btn__banner{
-                    margin: 7px 0px;
-                    border: solid $color-white 1px;
-                }
-            }
+@media screen and (max-width: 775px) {
+  body {
+    .nav {
+      .btn__login {
+        border: solid 2px $color-white;
+        right: 10px;
+      }
+
+      .tittle__nav {
+        a {
+          color: $color-black;
+          text-decoration: none;
         }
-        .footer{
-            flex-wrap: wrap;
-            .contend__listas__footer{
-                padding: 30px 0px;
-                justify-content: flex-start;
-                width: 100%;
-                .leyenda__footer{
-                    justify-content: flex-start;
-                    width: 100%;
-                    padding: 0px 10px;
-                }
-                .menus__footer{
-                    width: 100%;
-                    padding: 0;
-                    justify-content: flex-start;
-                }
-            }
-        }
+      }
     }
+
+    .banner__principal {
+      .content__btn {
+        flex-direction: column;
+
+        .btn__banner {
+          margin: 7px 0px;
+          border: solid $color-white 1px;
+        }
+      }
+    }
+
+    .footer {
+      flex-wrap: wrap;
+
+      .contend__listas__footer {
+        padding: 30px 0px;
+        justify-content: flex-start;
+        width: 100%;
+
+        .leyenda__footer {
+          justify-content: flex-start;
+          width: 100%;
+          padding: 0px 10px;
+        }
+
+        .menus__footer {
+          width: 100%;
+          padding: 0;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (max-width:725px) {
-    body{
-        .nav{
-            .menu{
-                display: none;
-            }
-            .btn__login{
-                border: solid 2px $color-white;
-                right: 10px;
-            }
-            .tittle__nav{
-                 a{
-                  color:$color-black;
-                  text-decoration: none;
-                //   @include font(.8em,500);
-                 }
-                }
-            }
-        
-        .banner__principal{
-            .content__btn{
-                flex-direction: column;
-                .btn__banner{
-                    margin: 7px 0px;
-                }
-            }
+@media screen and (max-width: 725px) {
+  body {
+    .header {
+      display: flex;
+      .tittle__nav {
+        @include caja_flex(flex,center,center);
+        position: relative;
+        height: 100%;
+        width: 100%;
+        span {
+          position: absolute;
+          width: 100%;
+          padding: 0px 10px;
+          a {
+            color: $color-black;
+            text-decoration: none;
+            font-size: calc(1vw + 1rem);
+          }
         }
-        .footer{
-            flex-wrap: wrap;
-            .contend__listas__footer{
-                padding: 30px 0px;
-                justify-content: flex-start;
-                width: 100%;
-                .leyenda__footer{
-                    justify-content: flex-start;
-                    padding: 0px 10px;
-                }
-                .menus__footer{
-                    width: 100%;
-                    padding: 0;
-                    justify-content: flex-start;
-                }
-            }
+      }
+      .icons__responsive {
+        display: flex;
+        position: absolute;
+        right: 0;
+        z-index: 11000;
+        .abrir__menu {
+          display: flex;
+          border: none;
+          outline: none;
+          padding: 10px 20px;
+          background-color: transparent;
+          &.inactivo {
+            display: none;
+          }
         }
+        .icons {
+          font-size: 1.7em;
+          color: $color-green-litgh;
+          cursor: pointer;
+        }
+      }
+      .nav {
+        z-index: -1;
+        .quitar__menu {
+          display: none;
+          border: none;
+          outline: none;
+          padding: 10px 20px;
+          background-color: transparent;
+          &.activo {
+            display: flex;
+          }
+        }
+        .menu {
+          visibility: hidden;
+          .menu__list {
+            padding: 15px 30px;
+          }
+        }
+        &.active {
+          @include caja_flex(flex, center, center);
+          background-color: $color-green-second;
+          flex-direction: column;
+          left: 0;
+          top: 0;
+          height: 100%; 
+          position: fixed;
+        }
+      }
     }
+    .tittle__nav {
+      position: absolute;
+      // right: 20px;
+      a {
+        color: $color-black;
+        text-decoration: none;
+        font-size: 1.2em;
+      }
+    }
+  }
+  .banner__principal {
+    .content__btn {
+      flex-direction: column;
+
+      .btn__banner {
+        margin: 7px 0px;
+      }
+    }
+  }
+
+  .footer {
+    flex-wrap: wrap;
+
+    .contend__listas__footer {
+      padding: 30px 0px;
+      justify-content: flex-start;
+      width: 100%;
+
+      .leyenda__footer {
+        justify-content: flex-start;
+        padding: 0px 0px 0px 10px;
+        span{
+          padding: 0;
+        }
+      }
+
+      .menus__footer {
+        width: 100%;
+        padding: 0;
+        justify-content: flex-start;
+      }
+    }
+  }
 }

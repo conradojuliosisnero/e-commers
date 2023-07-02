@@ -8,8 +8,6 @@
   <meta name="description" content="Ecoomers, esto es un proyecto personal" />
   <meta name="keywords" content="HTML, CSS, Java Script, Boostrap,Ecoomers " />
   <link rel="stylesheet" href="style/style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;800;900&display=swap"
@@ -20,23 +18,33 @@
 </head>
 
 <body class="body">
-  <nav class="container-fluid nav">
+  <header class="header">
     <div class="tittle__nav"><span><a href="#">E-COMMERCE</a></span></div>
-    <ul class="menu">
+    <div class="icons__responsive">
+    <button class="abrir__menu" id="abrir__menu" onclick="">
+      <span><i onclick="" class="icons fa-solid fa-bars-staggered"></i></span>
+    </button>
+  </div>
+  <nav class="nav">
+    <button class="quitar__menu" id="quitar__menu">
+      <span><i class="icons fa-solid fa-x"></i></span>
+    </button>  
+    <ul class="menu" id="menu">
       <li class="menu__list"><a href="#">Home</a><i class="fa-solid fa-house"></i></li>
       <li class="menu__list"><a href="#">Products</a><i class="fa-solid fa-tag"></i></li>
       <li class="menu__list"><a href="#">Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
       <li class="menu__list"><a href="#">Contac</a><i class="fa-regular fa-comment"></i></li>
     </ul>
-    <button class="btn__login">
-      <div class="icon">
-        <i class="fa-solid fa-arrow-right-to-bracket"></i>
-      </div>
-      <span><a href="#">Login</a></span>
-    </button>
   </nav>
+  <button class="btn__login">
+    <div class="icon">
+      <i class="fa-solid fa-arrow-right-to-bracket"></i>
+    </div>
+    <span><a href="#">Login</a></span>
+  </button>
+</header>
   <!-- seccion 1 -->
-  <section class="container-fluid banner__principal uno">
+  <section class="banner__principal uno">
     <span class="leyenda">VISTE CASUAL Y A LA MODA</span>
     <div class="content__btn">
       <button class="btn__banner">
@@ -103,9 +111,7 @@
         </div>
       </footer>
       <!-- scripst de Boostrap y JS  -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-  </script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,117 +1,117 @@
-
-.nav {
-  position: absolute;
-  z-index: 100;
-  display: flex;
-  justify-content: flex-end;
+.header {
+  @include size(100%, 120px);
+  position: relative;
   background-color: transparent;
-  &:hover{
-    background-color: $color-cream;
-  }
-  .tittle__nav{
-    position: absolute;
-    left: 20px;
-    top: 30px;
-    span{
+  position: relative;
+  @include caja_flex(flex, center, center);
+  .tittle__nav {
+    @include caja_flex(flex,center,center);
+    position: relative;
+    height: 100%;
+    width: 100%;
+    span {
       position: relative;
       width: 100%;
-     a{
-      color:$color-black;
-      text-decoration: none;
-      font-size: calc(1vw + 1rem);
-     }
+      padding: 0px 10px;
+      a {
+        color: $color-black;
+        text-decoration: none;
+        font-size: calc(1vw + 1rem);
+      }
     }
   }
-  .menu {
+  .icons__responsive{
+    visibility: hidden;
+  }
+
+  .nav {
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background-color: #3333;
     @include caja_flex(flex, center, center);
-    @include size(100%,100px);
     position: relative;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    .menu__list {
-      margin: 0px 5px;
-      position: relative;
-      overflow: hidden;
-      padding: 0px 30px;
-      cursor: pointer;
-      a {
-        text-decoration: none;
-        color: #4b4b4b;
-        @include font(1.1em, 300);
+    .quitar__menu{
+      visibility: hidden;
+    }
+    .menu {
+      @include caja_flex(flex, center, center);
+      list-style: none;
+      .menu__list {
+        display: flex;
+        padding: 0px 20px;
+        position: relative;
         overflow: hidden;
-        transition: color .3s ease-out;
         &::after{
           content: '';
           position: absolute;
           left: -130px;
           bottom: 0;
+          background-color: $color-green-litgh;
           @include size(100%,1px);
-          background-color: #333333;
-          transition: left .3s ease;
+          transition: left .4s ease;
         }
         &:hover::after{
           left: 0;
         }
-      }
-      i {
-        color: #333333;
-        font-size: 1.3em;
-        padding: 10px;
-        position: absolute;
-        bottom: -40px;
-        left: 0;
+        a {
+          text-decoration: none;
+          color: $color-green-litgh;
+          position: relative;
+        }
+        i {
+          position: absolute;
+          left: 0;
+          bottom:-30px;
+        }
       }
     }
   }
 
-  .btn__login{
-    @include caja_flex(flex,center,center);
+  .btn__login {
+    @include caja_flex(flex, center, center);
     @include btn(transparent);
-    @include size(6em,60px);
-    position: absolute;
+    @include size(6em, 60px);
+    position: relative;
     overflow: hidden;
-    left: unset;
-    right: 30px;
-    top: 20px;
     margin-left: 30px;
-    transition:background-color .3s ease ;
-    &.sin-hover{
-      @include caja_flex(flex,center,center);
+    background-color: #333333;
+    transition: background-color 0.3s ease;
+    display: none;
+    &.sin-hover {
+      @include caja_flex(flex, center, center);
       @include btn(transparent);
-      @include size(6em,60px);
+      @include size(6em, 60px);
       position: absolute;
       overflow: hidden;
       left: unset;
       right: 30px;
       top: 20px;
       margin-left: 30px;
-      transition:background-color .3s ease ;
+      transition: background-color 0.3s ease;
     }
-    span{
-        position: absolute;
-        transition: left .5s ease;
-        a{
-          color: #4b4b4b;
-          text-decoration: none;
-        }
+    span {
+      position: absolute;
+      transition: left 0.5s ease;
+      a {
+        color: #4b4b4b;
+        text-decoration: none;
+      }
     }
-    .icon{
-        position: absolute;
-        left: -50px;
-        color: #333333;
-        transition: left .5s ease;
+    .icon {
+      position: absolute;
+      left: -50px;
+      color: #333333;
+      transition: left 0.5s ease;
     }
-    &:hover span{
-        left: 10px;
+    &:hover span {
+      left: 10px;
     }
-    &:hover .icon{
+    &:hover .icon {
       left: 70px;
     }
-    &:hover{
+    &:hover {
       background-color: $color-white;
     }
-
   }
-
 }

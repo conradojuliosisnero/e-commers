@@ -8,8 +8,8 @@
         width: 100%;
         .leyenda__footer{
             @include caja_flex(flex,center,center);
-            width: calc(50%);
             span{
+                display: flex;
                 color: #a2a2a2;
             }
         }
