@@ -1,0 +1,149 @@
+$form-max-width: 350px;
+$form-border-radius: 20px;
+$title-bg-color: royalblue;
+$message-color: rgba(88, 87, 87, 0.822);
+$signin-color: royalblue;
+$input-border-color: rgba(105, 105, 105, 0.397);
+$valid-input-color: green;
+$submit-bg-color: royalblue;
+$submit-hover-bg-color: rgb(56, 90, 194);
+
+@import "variables";
+
+.body{
+    width: 100%;
+    height: 100vh;
+    background-color: #e6e6e6;
+    @include caja_flex(flex,center,center);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: $form-max-width;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: $form-border-radius;
+  position: relative;
+  
+  .title {
+    font-size: 28px;
+    color: $title-bg-color;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    
+    &::before, &::after {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      left: 0px;
+      background-color: $title-bg-color;
+    }
+    
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-color: $title-bg-color;
+    }
+    
+    &::after {
+      width: 18px;
+      height: 18px;
+      animation: pulse 1s linear infinite;
+    }
+  }
+  
+  .message, .signin {
+    color: $message-color;
+    font-size: 14px;
+  }
+  
+  .signin {
+    text-align: center;
+    
+    a {
+      color: $signin-color;
+      
+      &:hover {
+        text-decoration: underline $signin-color;
+      }
+    }
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  label {
+    position: relative;
+    
+    .input {
+      width: 80%;
+      padding: 10px 10px 20px 10px;
+      outline: 0;
+      border: 1px solid $input-border-color;
+      border-radius: 10px;
+      
+      & + span {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        color: grey;
+        font-size: 0.9em;
+        cursor: text;
+        transition: 0.3s ease;
+      }
+      
+      &:placeholder-shown + span {
+        top: 15px;
+        font-size: 0.9em;
+      }
+      
+      &:focus + span, &.valid + span {
+        top: 30px;
+        font-size: 0.7em;
+        font-weight: 600;
+      }
+      
+      &.valid + span {
+        color: $valid-input-color;
+      }
+    }
+  }
+  
+  .submit {
+    border: none;
+    outline: none;
+    background-color: $submit-bg-color;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: $submit-hover-bg-color;
+    }
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
