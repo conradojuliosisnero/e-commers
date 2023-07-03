@@ -4,54 +4,41 @@
   background-color: transparent;
   position: relative;
   @include caja_flex(flex, center, center);
-  .tittle__nav {
-    @include caja_flex(flex,center,center);
-    position: relative;
-    height: 100%;
-    width: 100%;
-    span {
-      position: relative;
-      width: 100%;
-      padding: 0px 10px;
-      a {
-        color: $color-black;
-        text-decoration: none;
-        font-size: calc(1vw + 1rem);
-      }
-    }
-  }
-  .icons__responsive{
-    visibility: hidden;
+  justify-content: space-around;
+  .icons__responsive {
+    display: none;
   }
 
   .nav {
     width: 100%;
     height: 100%;
-    z-index: 10000;
-    background-color: #3333;
+    background-color: transparent;
     @include caja_flex(flex, center, center);
     position: relative;
-    .quitar__menu{
-      visibility: hidden;
+    .quitar__menu {
+      display: none;
     }
     .menu {
       @include caja_flex(flex, center, center);
       list-style: none;
+      height: 100%;
+      margin: 0;
+      padding: 0;
       .menu__list {
         display: flex;
         padding: 0px 20px;
         position: relative;
         overflow: hidden;
-        &::after{
-          content: '';
+        &::after {
+          content: "";
           position: absolute;
           left: -130px;
           bottom: 0;
           background-color: $color-green-litgh;
-          @include size(100%,1px);
-          transition: left .4s ease;
+          @include size(100%, 1px);
+          transition: left 0.4s ease;
         }
-        &:hover::after{
+        &:hover::after {
           left: 0;
         }
         a {
@@ -62,56 +49,72 @@
         i {
           position: absolute;
           left: 0;
-          bottom:-30px;
+          bottom: -30px;
         }
       }
     }
   }
-
-  .btn__login {
+  .contend__btnlogin {
     @include caja_flex(flex, center, center);
-    @include btn(transparent);
-    @include size(6em, 60px);
-    position: relative;
-    overflow: hidden;
-    margin-left: 30px;
-    background-color: #333333;
-    transition: background-color 0.3s ease;
-    display: none;
-    &.sin-hover {
+    height: 100%;
+    .button {
       @include caja_flex(flex, center, center);
-      @include btn(transparent);
-      @include size(6em, 60px);
-      position: absolute;
+      padding: 0.8em 1.7em;
+      background-color: transparent;
+      border-radius: 0.3em;
+      position: relative;
       overflow: hidden;
-      left: unset;
-      right: 30px;
-      top: 20px;
-      margin-left: 30px;
-      transition: background-color 0.3s ease;
-    }
-    span {
-      position: absolute;
-      transition: left 0.5s ease;
+      cursor: pointer;
+      transition: 0.5s;
+      font-weight: 400;
+      font-size: 1em;
+      border: none;
+      font-family: inherit;
+      text-transform: uppercase;
+      color: $color-green-litgh;
+      z-index: 1;
+      margin: 0px 15px;
       a {
-        color: #4b4b4b;
         text-decoration: none;
+        color: $color-black;
       }
-    }
-    .icon {
-      position: absolute;
-      left: -50px;
-      color: #333333;
-      transition: left 0.5s ease;
-    }
-    &:hover span {
-      left: 10px;
-    }
-    &:hover .icon {
-      left: 70px;
-    }
-    &:hover {
-      background-color: $color-white;
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        background-color: $color-green-second;
+        transition: 1s ease;
+      }
+
+      &::before {
+        top: -1em;
+        left: -1em;
+      }
+
+      &::after {
+        left: calc(100% + 1em);
+        top: calc(100% + 1em);
+      }
+
+      &:hover::before,
+      &:hover::after {
+        height: 410px;
+        width: 410px;
+      }
+
+      &:hover {
+        color: rgb(10, 25, 30);
+      }
+
+      &:active {
+        filter: brightness(0.8);
+      }
     }
   }
 }

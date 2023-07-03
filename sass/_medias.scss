@@ -72,47 +72,39 @@
 
 @media screen and (max-width: 725px) {
   body {
+    // contenedor del navegador
     .header {
       display: flex;
-      .tittle__nav {
-        @include caja_flex(flex,center,center);
-        position: relative;
-        height: 100%;
-        width: 100%;
-        span {
-          position: absolute;
-          width: 100%;
-          padding: 0px 10px;
-          a {
-            color: $color-black;
-            text-decoration: none;
-            font-size: calc(1vw + 1rem);
-          }
-        }
-      }
+      position: relative;
+      width: 100%;
+      // iconos responsivos 
       .icons__responsive {
         display: flex;
-        position: absolute;
         right: 0;
+        position: absolute;
+        left: 0;
         z-index: 11000;
         .abrir__menu {
           display: flex;
+          left: -1px;
           border: none;
           outline: none;
           padding: 10px 20px;
           background-color: transparent;
           &.inactivo {
-            display: none;
+            visibility: hidden;
           }
         }
+        // estilos generales de los iconos 
         .icons {
           font-size: 1.7em;
           color: $color-green-litgh;
           cursor: pointer;
         }
       }
+      // navegador 
       .nav {
-        z-index: -1;
+        width: 50%;
         .quitar__menu {
           display: none;
           border: none;
@@ -124,7 +116,7 @@
           }
         }
         .menu {
-          visibility: hidden;
+          display: none;
           .menu__list {
             padding: 15px 30px;
           }
@@ -140,26 +132,17 @@
         }
       }
     }
-    .tittle__nav {
-      position: absolute;
-      // right: 20px;
-      a {
-        color: $color-black;
-        text-decoration: none;
-        font-size: 1.2em;
-      }
-    }
-  }
+  // contenido 
   .banner__principal {
     .content__btn {
       flex-direction: column;
-
+      // botones del banner 
       .btn__banner {
         margin: 7px 0px;
       }
     }
   }
-
+  // pie de pagina 
   .footer {
     flex-wrap: wrap;
 
@@ -183,4 +166,5 @@
       }
     }
   }
+}
 }
