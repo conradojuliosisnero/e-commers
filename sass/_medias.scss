@@ -5,16 +5,6 @@
         border: solid 2px $color-white;
         right: 10px;
       }
-
-      .tittle__nav {
-        top: 35px;
-
-        a {
-          color: $color-black;
-          text-decoration: none;
-          @include font(1.1em, 500);
-        }
-      }
     }
   }
 }
@@ -22,23 +12,18 @@
 @media screen and (max-width: 775px) {
   body {
     .nav {
+      // boton de login 
       .btn__login {
         border: solid 2px $color-white;
         right: 10px;
       }
-
-      .tittle__nav {
-        a {
-          color: $color-black;
-          text-decoration: none;
-        }
-      }
     }
 
     .banner__principal {
+      // ceontenedor de banners 
       .content__btn {
         flex-direction: column;
-
+        // bonotes del banners 
         .btn__banner {
           margin: 7px 0px;
           border: solid $color-white 1px;
@@ -48,18 +33,18 @@
 
     .footer {
       flex-wrap: wrap;
-
+      // contenedores
       .contend__listas__footer {
         padding: 30px 0px;
         justify-content: flex-start;
         width: 100%;
-
+        // titulos de menus 
         .leyenda__footer {
           justify-content: flex-start;
           width: 100%;
           padding: 0px 10px;
         }
-
+        // menus 
         .menus__footer {
           width: 100%;
           padding: 0;
@@ -70,7 +55,7 @@
   }
 }
 
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 425px) {
   body {
     // contenedor del navegador
     .header {
@@ -84,6 +69,7 @@
         position: absolute;
         left: 0;
         z-index: 11000;
+        // icono responsive de abrir menu 
         .abrir__menu {
           display: flex;
           left: -1px;
@@ -105,12 +91,14 @@
       // navegador
       .nav {
         width: 50%;
+        // menu 
         .menu {
           visibility: hidden;
           .menu__list {
             padding: 15px 30px;
           }
         }
+        // estado activo del menu 
         &.active {
           visibility: visible;
           @include caja_flex(flex, center, center);
@@ -124,7 +112,7 @@
             display: block;
           }
         }
-
+        // icono responsive de quitar el menu 
         .quitar__menu {
           visibility: hidden;
           border: none;
@@ -152,12 +140,12 @@
     // pie de pagina
     .footer {
       flex-wrap: wrap;
-
+      // contenedores 
       .contend__listas__footer {
         padding: 30px 0px;
         justify-content: flex-start;
         width: 100%;
-
+        // titulos del menus 
         .leyenda__footer {
           justify-content: flex-start;
           padding: 0px 0px 0px 10px;
@@ -165,7 +153,7 @@
             padding: 0;
           }
         }
-
+        // menus 
         .menus__footer {
           width: 100%;
           padding: 0;
