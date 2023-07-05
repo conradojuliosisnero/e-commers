@@ -21,18 +21,22 @@ body::-webkit-scrollbar-thumb {
 .body {
   width: 100%;
   height: 100vh;
-  background-color: #e6e6e6;
+  background-color: #d6d6d6;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .form-box {
-  max-width: 300px;
-  background: #f1f7fe;
-  overflow: hidden;
+  display: flex;
+  max-width: 350px;
+  background: #ffffff;
+  padding: 20px;
   border-radius: 16px;
   color: #010101;
+  position: relative;
+  overflow: hidden;
+  /*Button*/
 }
 .form-box .form {
   position: relative;
@@ -43,11 +47,11 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   /*Form text*/
   /*Inputs box*/
-  /*Button*/
 }
 .form-box .form .title {
   font-weight: bold;
   font-size: 1.6rem;
+  color: #447046;
 }
 .form-box .form .subtitle {
   font-size: 1rem;
@@ -74,19 +78,20 @@ body::-webkit-scrollbar-thumb {
   padding: 16px;
   font-size: 0.85rem;
   background-color: #e0ecfb;
+  border-radius: 1em;
   box-shadow: 0 -1px 8% 0 rgba(0, 0, 0, 0.08);
 }
-.form-box .form .form-section a {
-  font-weight: bold;
-  color: #0066ff;
-  transition: color 0.3s ease;
+.form-box .form .form-section .text {
+  display: flex;
+  max-width: 100%;
 }
-.form-box .form .form-section a:hover {
-  color: #005ce6;
-  text-decoration: underline;
+.form-box .form .form-section .text .link {
+  padding-left: 5px;
+  text-decoration: none;
+  color: #447046;
 }
-.form-box .form button {
-  background-color: #0066ff;
+.form-box button {
+  background-color: #bce5be;
   color: #fff;
   border: 0;
   border-radius: 24px;
@@ -96,6 +101,6 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.form-box .form button:hover {
-  background-color: #005ce6;
+.form-box button:hover {
+  background-color: #447046;
 }/*# sourceMappingURL=login.css.map */

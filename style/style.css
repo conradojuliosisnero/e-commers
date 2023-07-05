@@ -292,24 +292,11 @@ body::-webkit-scrollbar-thumb {
     border: solid 2px #FFFFFF;
     right: 10px;
   }
-  body .nav .tittle__nav {
-    top: 35px;
-  }
-  body .nav .tittle__nav a {
-    color: #1b1b1b;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 500;
-  }
 }
 @media screen and (max-width: 775px) {
   body .nav .btn__login {
     border: solid 2px #FFFFFF;
     right: 10px;
-  }
-  body .nav .tittle__nav a {
-    color: #1b1b1b;
-    text-decoration: none;
   }
   body .banner__principal .content__btn {
     flex-direction: column;
@@ -337,7 +324,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: flex-start;
   }
 }
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 425px) {
   body .header {
     display: flex;
     position: relative;

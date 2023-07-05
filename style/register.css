@@ -39,7 +39,7 @@ body::-webkit-scrollbar-thumb {
 }
 .form .title {
   font-size: 28px;
-  color: royalblue;
+  color: #447046;
   font-weight: 600;
   letter-spacing: -1px;
   position: relative;
@@ -54,12 +54,12 @@ body::-webkit-scrollbar-thumb {
   width: 16px;
   border-radius: 50%;
   left: 0px;
-  background-color: royalblue;
+  background-color: #bce5be;
 }
 .form .title::before {
   width: 18px;
   height: 18px;
-  background-color: royalblue;
+  background-color: #bce5be;
 }
 .form .title::after {
   width: 18px;
@@ -74,11 +74,11 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 .form .signin a {
-  color: royalblue;
+  color: #447046;
 }
 .form .signin a:hover {
-  -webkit-text-decoration: underline royalblue;
-          text-decoration: underline royalblue;
+  -webkit-text-decoration: underline #447046;
+          text-decoration: underline #447046;
 }
 .form .flex {
   display: flex;
@@ -123,16 +123,17 @@ body::-webkit-scrollbar-thumb {
 .form .submit {
   border: none;
   outline: none;
-  background-color: royalblue;
+  background-color: #bce5be;
   padding: 10px;
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
   transform: 0.3s ease;
   cursor: pointer;
+  transition: background-color 0.5s ease;
 }
 .form .submit:hover {
-  background-color: rgb(56, 90, 194);
+  background-color: #447046;
 }
 
 @keyframes pulse {
