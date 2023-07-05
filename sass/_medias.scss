@@ -77,7 +77,7 @@
       display: flex;
       position: relative;
       width: 100%;
-      // iconos responsivos 
+      // iconos responsivos
       .icons__responsive {
         display: flex;
         right: 0;
@@ -95,14 +95,14 @@
             visibility: hidden;
           }
         }
-        // estilos generales de los iconos 
+        // estilos generales de los iconos
         .icons {
           font-size: 1.7em;
           color: $color-green-litgh;
           cursor: pointer;
         }
       }
-      // navegador 
+      // navegador
       .nav {
         width: 50%;
         .menu {
@@ -118,12 +118,13 @@
           flex-direction: column;
           left: 0;
           top: 0;
-          height: 100%; 
+          height: 100%;
           position: fixed;
-          .menu__list{
+          .menu__list {
             display: block;
           }
         }
+
         .quitar__menu {
           visibility: hidden;
           border: none;
@@ -138,39 +139,39 @@
         }
       }
     }
-    // contenido 
+    // contenido
     .banner__principal {
       .content__btn {
         flex-direction: column;
-        // botones del banner 
+        // botones del banner
         .btn__banner {
           margin: 7px 0px;
         }
       }
     }
-    // pie de pagina 
+    // pie de pagina
     .footer {
-    flex-wrap: wrap;
+      flex-wrap: wrap;
 
-    .contend__listas__footer {
-      padding: 30px 0px;
-      justify-content: flex-start;
-      width: 100%;
-
-      .leyenda__footer {
+      .contend__listas__footer {
+        padding: 30px 0px;
         justify-content: flex-start;
-        padding: 0px 0px 0px 10px;
-        span{
-          padding: 0;
-        }
-      }
-
-      .menus__footer {
         width: 100%;
-        padding: 0;
-        justify-content: flex-start;
+
+        .leyenda__footer {
+          justify-content: flex-start;
+          padding: 0px 0px 0px 10px;
+          span {
+            padding: 0;
+          }
+        }
+
+        .menus__footer {
+          width: 100%;
+          padding: 0;
+          justify-content: flex-start;
+        }
       }
     }
   }
-}
 }
