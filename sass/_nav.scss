@@ -1,10 +1,13 @@
 .header {
-  @include size(100%, 120px);
-  position: relative;
+  @include size(100%, 7.5rem);
   background-color: transparent;
-  position: relative;
+  position: absolute;
+  z-index: 100;
   @include caja_flex(flex, center, center);
   justify-content: space-around;
+  &:hover{
+    background-color: $color-white;
+  }
   .icons__responsive {
     display: none;
   }
@@ -26,7 +29,7 @@
       padding: 0;
       .menu__list {
         display: flex;
-        padding: 0px 20px;
+        padding: 0px 1.25rem;
         position: relative;
         overflow: hidden;
         &::after {

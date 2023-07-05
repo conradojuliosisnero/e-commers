@@ -105,23 +105,14 @@
       // navegador 
       .nav {
         width: 50%;
-        .quitar__menu {
-          display: none;
-          border: none;
-          outline: none;
-          padding: 10px 20px;
-          background-color: transparent;
-          &.activo {
-            display: flex;
-          }
-        }
         .menu {
-          display: none;
+          visibility: hidden;
           .menu__list {
             padding: 15px 30px;
           }
         }
         &.active {
+          visibility: visible;
           @include caja_flex(flex, center, center);
           background-color: $color-green-second;
           flex-direction: column;
@@ -129,21 +120,36 @@
           top: 0;
           height: 100%; 
           position: fixed;
+          .menu__list{
+            display: block;
+          }
+        }
+        .quitar__menu {
+          visibility: hidden;
+          border: none;
+          outline: none;
+          padding: 10px 20px;
+          background-color: transparent;
+          &.activo {
+            display: block;
+            z-index: 20000;
+            visibility: visible;
+          }
         }
       }
     }
-  // contenido 
-  .banner__principal {
-    .content__btn {
-      flex-direction: column;
-      // botones del banner 
-      .btn__banner {
-        margin: 7px 0px;
+    // contenido 
+    .banner__principal {
+      .content__btn {
+        flex-direction: column;
+        // botones del banner 
+        .btn__banner {
+          margin: 7px 0px;
+        }
       }
     }
-  }
-  // pie de pagina 
-  .footer {
+    // pie de pagina 
+    .footer {
     flex-wrap: wrap;
 
     .contend__listas__footer {
