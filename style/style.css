@@ -108,7 +108,7 @@ body::-webkit-scrollbar-thumb {
   font-family: inherit;
   text-transform: uppercase;
   color: #447046;
-  z-index: 1;
+  z-index: 1000;
   margin: 0px 15px;
 }
 .header .contend__btnlogin .button a {
@@ -156,7 +156,7 @@ body::-webkit-scrollbar-thumb {
   background-position: center;
   position: relative;
 }
-.banner__principal .leyenda {
+.banner__principal .leyendas, .banner__principal .leyenda__tres, .banner__principal .leyenda__dos, .banner__principal .leyenda__uno {
   display: flex;
   position: absolute;
   padding: 25px;
@@ -167,8 +167,14 @@ body::-webkit-scrollbar-thumb {
   z-index: 5;
   transition: color 0.3s ease;
 }
-.banner__principal .leyenda:nth-child(2) {
+.banner__principal .leyenda__uno:hover {
+  color: #e6bd4c;
+}
+.banner__principal .leyenda__dos:hover {
   color: #fa5ba5;
+}
+.banner__principal .leyenda__tres:hover {
+  color: #a8f8ff;
 }
 .banner__principal .content__btn {
   display: flex;
@@ -297,6 +303,7 @@ body::-webkit-scrollbar-thumb {
   body .nav .btn__login {
     border: solid 2px #FFFFFF;
     right: 10px;
+    z-index: 33000;
   }
   body .banner__principal .content__btn {
     flex-direction: column;
@@ -335,11 +342,10 @@ body::-webkit-scrollbar-thumb {
     right: 0;
     position: absolute;
     left: 0;
-    z-index: 11000;
   }
   body .header .icons__responsive .abrir__menu {
     display: flex;
-    left: -1px;
+    left: 1px;
     border: none;
     outline: none;
     padding: 10px 20px;

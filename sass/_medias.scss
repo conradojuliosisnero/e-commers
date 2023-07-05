@@ -16,6 +16,7 @@
       .btn__login {
         border: solid 2px $color-white;
         right: 10px;
+        z-index: 33000;
       }
     }
 
@@ -68,11 +69,9 @@
         right: 0;
         position: absolute;
         left: 0;
-        z-index: 11000;
-        // icono responsive de abrir menu 
         .abrir__menu {
           display: flex;
-          left: -1px;
+          left: 1px;
           border: none;
           outline: none;
           padding: 10px 20px;

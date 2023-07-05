@@ -4,7 +4,8 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    .leyenda{
+    // clase extendida leyendas
+    .leyendas{
         display: flex;
         position: absolute;
         padding: 25px;
@@ -13,10 +14,26 @@
         color:$color-white;
         z-index: 5;
         transition: color .3s ease;
-        &:nth-child(2){
-            color:$color-pink-litgh;
+    }
+    .leyenda__uno{
+        @extend .leyendas;
+        &:hover{
+        color: $color-yellow;
         }
     } 
+    .leyenda__dos{
+        @extend .leyendas;
+        &:hover{
+        color: $color-pink-litgh;
+        }
+    } 
+    .leyenda__tres{
+        @extend .leyendas;
+        &:hover{
+            color: $color-blue-litgh;
+            }
+    } 
+
     .content__btn{
         @include caja_flex(flex,center,center);
         width: 100%;
