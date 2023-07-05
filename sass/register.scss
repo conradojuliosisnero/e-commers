@@ -1,3 +1,4 @@
+@import "variables";
 $form-max-width: 350px;
 $form-border-radius: 20px;
 $title-bg-color: royalblue;
@@ -8,7 +9,6 @@ $valid-input-color: green;
 $submit-bg-color: royalblue;
 $submit-hover-bg-color: rgb(56, 90, 194);
 
-@import "variables";
 
 .body{
     width: 100%;
@@ -29,7 +29,7 @@ $submit-hover-bg-color: rgb(56, 90, 194);
   
   .title {
     font-size: 28px;
-    color: $title-bg-color;
+    color: $color-green-litgh;
     font-weight: 600;
     letter-spacing: -1px;
     position: relative;
@@ -44,13 +44,13 @@ $submit-hover-bg-color: rgb(56, 90, 194);
       width: 16px;
       border-radius: 50%;
       left: 0px;
-      background-color: $title-bg-color;
+      background-color: $color-green-second;
     }
     
     &::before {
       width: 18px;
       height: 18px;
-      background-color: $title-bg-color;
+      background-color: $color-green-second;
     }
     
     &::after {
@@ -69,10 +69,10 @@ $submit-hover-bg-color: rgb(56, 90, 194);
     text-align: center;
     
     a {
-      color: $signin-color;
+      color: $color-green-litgh;
       
       &:hover {
-        text-decoration: underline $signin-color;
+        text-decoration: underline $color-green-litgh;
       }
     }
   }
@@ -123,15 +123,16 @@ $submit-hover-bg-color: rgb(56, 90, 194);
   .submit {
     border: none;
     outline: none;
-    background-color: $submit-bg-color;
+    background-color: $color-green-second;
     padding: 10px;
     border-radius: 10px;
     color: #fff;
     font-size: 16px;
     transform: .3s ease;
     cursor: pointer;
+    transition:background-color .5s ease ;
     &:hover {
-      background-color: $submit-hover-bg-color;
+      background-color: $color-green-litgh;
     }
   }
 }
