@@ -408,13 +408,13 @@ body::-webkit-scrollbar-thumb {
     color: #FFFFFF;
     font-size: 1.4em;
     padding: 0px 10px;
+    animation: quitarMenu 350ms ease-in-out;
   }
   body .header .nav .quitar__menu {
     visibility: hidden;
     border: none;
     outline: none;
     padding: 10px 20px;
-    background-color: transparent;
     position: absolute;
     top: 40px;
     left: 15px;
@@ -438,14 +438,6 @@ body::-webkit-scrollbar-thumb {
     }
     to {
       opacity: 0;
-    }
-  }
-  @keyframes girar {
-    from {
-      transform: rotateX("0");
-    }
-    to {
-      transform: rotateX("360");
     }
   }
   body .header .contend__btnlogin {
