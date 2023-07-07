@@ -21,4 +21,5 @@ function ocultarMenu() {//cerrar el menu
 }
 
 
+ocultarMenu(cerrarMenu);
 mostrarMenu(abrirMenu);
