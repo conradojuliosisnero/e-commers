@@ -1,9 +1,12 @@
+// elementos del nav 
 const abrirMenu = document.querySelector('.abrir__menu');//icono de abrir menu
 const cerrarMenu = document.querySelector('.quitar__menu');//icono de quitar menu
 const navegador = document.querySelector('.nav');//navegador
 const menu = document.querySelector('.menu');//menu con lista de links
 
-function mostrarMenu() {//abrir el menu
+// funciones 
+function mostrarMenu() {
+    //abrir el menu
     abrirMenu.addEventListener('click',()=>{
         navegador.classList.toggle('active');
         cerrarMenu.classList.toggle('activo');
@@ -11,7 +14,8 @@ function mostrarMenu() {//abrir el menu
     })
 }
 
-function ocultarMenu() {//cerrar el menu
+function ocultarMenu() {
+    //cerrar el menu
     cerrarMenu.addEventListener('click',()=>{
         navegador.classList.remove('active');
         abrirMenu.classList.remove();
@@ -20,6 +24,7 @@ function ocultarMenu() {//cerrar el menu
     })
 }
 
-
+// abrir y cerrar el menu responsive 
 ocultarMenu(cerrarMenu);
 mostrarMenu(abrirMenu);
+
