@@ -136,6 +136,7 @@
             color: $color-white;
             font-size: 1.4em;
             padding: 0px 10px;
+            animation: quitarMenu 350ms ease-in-out;
           }
         }
         // icono responsive de quitar el menu 
@@ -144,7 +145,6 @@
           border: none;
           outline: none;
           padding: 10px 20px;
-          background-color: transparent;
           position: absolute;
           top: 40px;
           left: 15px;
@@ -164,10 +164,6 @@
       @keyframes quitarMenu {
       from{opacity: 1;}
       to{opacity: 0;}
-      }
-      @keyframes girar {
-        from{transform: rotateX('0');}
-        to{transform: rotateX('360');}
       }
 
       // boton de login 
