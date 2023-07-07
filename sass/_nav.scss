@@ -60,6 +60,7 @@
   .contend__btnlogin {
     @include caja_flex(flex, center, center);
     height: 100%;
+    position: relative;
     .button {
       @include caja_flex(flex, center, center);
       padding: 0.8em 1.7em;
