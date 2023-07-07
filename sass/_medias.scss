@@ -119,6 +119,7 @@
           height: 100%;
           position: fixed;
           z-index: 200;
+          animation: mostrarMenu 350ms ease-in-out both;
           // menu 
           .menu {
             visibility: visible;
@@ -132,7 +133,7 @@
           }
           // btn quitar menu 
           .quitar__menu{
-            color: $color-green-litgh;
+            color: $color-white;
             font-size: 1.4em;
             padding: 0px 10px;
           }
@@ -154,6 +155,21 @@
           }
         }
       }
+
+      // animaciones
+      @keyframes mostrarMenu {
+        from{opacity: 0;}
+        to{opacity: 1;}
+      } 
+      @keyframes quitarMenu {
+      from{opacity: 1;}
+      to{opacity: 0;}
+      }
+      @keyframes girar {
+        from{transform: rotateX('0');}
+        to{transform: rotateX('360');}
+      }
+
       // boton de login 
       .contend__btnlogin{
         position: absolute;

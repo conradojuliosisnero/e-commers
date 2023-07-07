@@ -392,6 +392,7 @@ body::-webkit-scrollbar-thumb {
     height: 100%;
     position: fixed;
     z-index: 200;
+    animation: mostrarMenu 350ms ease-in-out both;
   }
   body .header .nav.active .menu {
     visibility: visible;
@@ -404,7 +405,7 @@ body::-webkit-scrollbar-thumb {
     color: #FFFFFF;
   }
   body .header .nav.active .quitar__menu {
-    color: #447046;
+    color: #FFFFFF;
     font-size: 1.4em;
     padding: 0px 10px;
   }
@@ -422,6 +423,30 @@ body::-webkit-scrollbar-thumb {
     display: block;
     z-index: 20000;
     visibility: visible;
+  }
+  @keyframes mostrarMenu {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes quitarMenu {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes girar {
+    from {
+      transform: rotateX("0");
+    }
+    to {
+      transform: rotateX("360");
+    }
   }
   body .header .contend__btnlogin {
     position: absolute;
