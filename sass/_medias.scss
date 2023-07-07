@@ -91,11 +91,13 @@
       }
       // navegador
       .nav {
+        visibility: hidden;
         position: fixed;
         left: 0;
         top: 0;
         width: 50%;
         height: 100%;
+        transition: visibility .5s ease;
         // menu 
         .menu {
           visibility: hidden;
@@ -119,6 +121,7 @@
           z-index: 200;
           // menu 
           .menu {
+            visibility: visible;
             flex-direction: column;
             .menu__list {
               padding: 25px 30px;
