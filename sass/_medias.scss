@@ -91,19 +91,24 @@
       }
       // navegador
       .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
         width: 50%;
+        height: 100%;
         // menu 
         .menu {
           visibility: hidden;
           .menu__list {
-            padding: 15px 30px;
+            padding: 25px 30px;
           }
         }
         // estado activo del menu 
         &.active {
+          @include caja_flex(flex, center, center);
           visibility: visible;
           width: 50%;
-          @include caja_flex(flex, center, center);
+          flex-direction: column;
           background-color: rgb(0, 0,0,.1);
           backdrop-filter: blur(5px);
           flex-direction: column;
@@ -111,8 +116,22 @@
           top: 0;
           height: 100%;
           position: fixed;
-          .menu__list {
-            display: block;
+          z-index: 200;
+          // menu 
+          .menu {
+            flex-direction: column;
+            .menu__list {
+              padding: 25px 30px;
+              a{
+                color: $color-white;
+              }
+            }
+          }
+          // btn quitar menu 
+          .quitar__menu{
+            color: $color-green-litgh;
+            font-size: 1.4em;
+            padding: 0px 10px;
           }
         }
         // icono responsive de quitar el menu 
@@ -122,12 +141,20 @@
           outline: none;
           padding: 10px 20px;
           background-color: transparent;
+          position: absolute;
+          top: 40px;
+          left: 15px;
           &.activo {
             display: block;
             z-index: 20000;
             visibility: visible;
           }
         }
+      }
+      // boton de login 
+      .contend__btnlogin{
+        position: absolute;
+        right: 0;
       }
     }
     // contenido
