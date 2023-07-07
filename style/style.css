@@ -90,6 +90,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
   height: 100%;
+  position: relative;
 }
 .header .contend__btnlogin .button {
   display: flex;
@@ -331,7 +332,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: flex-start;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 725px) {
   body .header {
     display: flex;
     position: relative;
@@ -350,6 +351,7 @@ body::-webkit-scrollbar-thumb {
     outline: none;
     padding: 10px 20px;
     background-color: transparent;
+    z-index: 100;
   }
   body .header .icons__responsive .abrir__menu.inactivo {
     visibility: hidden;
@@ -360,28 +362,51 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
   }
   body .header .nav {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 50%;
+    height: 100%;
+    transition: visibility 0.5s ease;
   }
   body .header .nav .menu {
     visibility: hidden;
   }
   body .header .nav .menu .menu__list {
-    padding: 15px 30px;
+    padding: 25px 30px;
   }
   body .header .nav.active {
-    visibility: visible;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #bce5be;
+    visibility: visible;
+    width: 50%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
     flex-direction: column;
     left: 0;
     top: 0;
     height: 100%;
     position: fixed;
+    z-index: 200;
   }
-  body .header .nav.active .menu__list {
-    display: block;
+  body .header .nav.active .menu {
+    visibility: visible;
+    flex-direction: column;
+  }
+  body .header .nav.active .menu .menu__list {
+    padding: 25px 30px;
+  }
+  body .header .nav.active .menu .menu__list a {
+    color: #FFFFFF;
+  }
+  body .header .nav.active .quitar__menu {
+    color: #447046;
+    font-size: 1.4em;
+    padding: 0px 10px;
   }
   body .header .nav .quitar__menu {
     visibility: hidden;
@@ -389,11 +414,18 @@ body::-webkit-scrollbar-thumb {
     outline: none;
     padding: 10px 20px;
     background-color: transparent;
+    position: absolute;
+    top: 40px;
+    left: 15px;
   }
   body .header .nav .quitar__menu.activo {
     display: block;
     z-index: 20000;
     visibility: visible;
+  }
+  body .header .contend__btnlogin {
+    position: absolute;
+    right: 0;
   }
   body .banner__principal .content__btn {
     flex-direction: column;
