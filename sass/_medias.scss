@@ -76,7 +76,7 @@
           border: none;
           outline: none;
           padding: 10px 20px;
-          background-color: transparent;
+
           z-index: 100;
           &.inactivo {
             visibility: hidden;
@@ -134,9 +134,10 @@
           // btn quitar menu 
           .quitar__menu{
             color: $color-white;
+            background-color: transparent;
             font-size: 1.4em;
             padding: 0px 10px;
-            animation: quitarMenu 350ms ease-in-out;
+
           }
         }
         // icono responsive de quitar el menu 
