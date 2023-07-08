@@ -20,11 +20,188 @@ body::-webkit-scrollbar-thumb {
 
 .main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 0px;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
 }
 .main .components {
-  width: 250px;
-  height: 450px;
-  background-color: aqua;
+  width: 350px;
+  height: 350px;
+  background-color: rgb(36, 115, 163);
+  border: solid 2px;
+}
+
+@media screen and (max-width: 1024px) {
+  body .nav .btn__login {
+    border: solid 2px #FFFFFF;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 775px) {
+  body .nav .btn__login {
+    border: solid 2px #FFFFFF;
+    right: 10px;
+    z-index: 33000;
+  }
+  body .banner__principal .content__btn {
+    flex-direction: column;
+  }
+  body .banner__principal .content__btn .btn__banner {
+    margin: 7px 0px;
+    border: solid #FFFFFF 1px;
+  }
+  body .footer {
+    flex-wrap: wrap;
+  }
+  body .footer .contend__listas__footer {
+    padding: 30px 0px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  body .footer .contend__listas__footer .leyenda__footer {
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0px 10px;
+  }
+  body .footer .contend__listas__footer .menus__footer {
+    width: 100%;
+    padding: 0;
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 725px) {
+  body .header {
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+  body .header .icons__responsive {
+    display: flex;
+    right: 0;
+    position: absolute;
+    left: 0;
+  }
+  body .header .icons__responsive .abrir__menu {
+    display: flex;
+    left: 1px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    z-index: 100;
+  }
+  body .header .icons__responsive .abrir__menu.inactivo {
+    visibility: hidden;
+  }
+  body .header .icons__responsive .icons {
+    font-size: 1.7em;
+    color: #447046;
+    cursor: pointer;
+  }
+  body .header .nav {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    transition: visibility 0.5s ease;
+  }
+  body .header .nav .menu {
+    visibility: hidden;
+  }
+  body .header .nav .menu .menu__list {
+    padding: 25px 30px;
+  }
+  body .header .nav.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    width: 50%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 200;
+    animation: mostrarMenu 350ms ease-in-out both;
+  }
+  body .header .nav.active .menu {
+    visibility: visible;
+    flex-direction: column;
+  }
+  body .header .nav.active .menu .menu__list {
+    padding: 25px 30px;
+  }
+  body .header .nav.active .menu .menu__list a {
+    color: #FFFFFF;
+  }
+  body .header .nav.active .quitar__menu {
+    color: #FFFFFF;
+    background-color: transparent;
+    font-size: 1.4em;
+    padding: 0px 10px;
+  }
+  body .header .nav .quitar__menu {
+    visibility: hidden;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    position: absolute;
+    top: 40px;
+    left: 15px;
+  }
+  body .header .nav .quitar__menu.activo {
+    display: block;
+    z-index: 20000;
+    visibility: visible;
+  }
+  @keyframes mostrarMenu {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes quitarMenu {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  body .header .contend__btnlogin {
+    position: absolute;
+    right: 0;
+  }
+  body .banner__principal .content__btn {
+    flex-direction: column;
+  }
+  body .banner__principal .content__btn .btn__banner {
+    margin: 7px 0px;
+  }
+  body .footer {
+    flex-wrap: wrap;
+  }
+  body .footer .contend__listas__footer {
+    padding: 30px 0px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  body .footer .contend__listas__footer .leyenda__footer {
+    justify-content: flex-start;
+    padding: 0px 0px 0px 10px;
+  }
+  body .footer .contend__listas__footer .leyenda__footer span {
+    padding: 0;
+  }
+  body .footer .contend__listas__footer .menus__footer {
+    width: 100%;
+    padding: 0;
+    justify-content: flex-start;
+  }
 }/*# sourceMappingURL=tienda.css.map */
