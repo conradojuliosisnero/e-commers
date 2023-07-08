@@ -24,6 +24,12 @@ $color-blue-litgh:#a8f8ff;
     justify-content: $justy;
 }
 
+@mixin caja_grid(){
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    gap: 0px;
+}
+
 @mixin font($size,$weid){
     font-size: $size;
     font-weight: $weid;

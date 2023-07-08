@@ -1,0 +1,9 @@
+@import 'variables';
+
+.main{
+    @include caja_grid();
+    .components{
+        @include size(250px,450px);
+        background-color: aqua;
+    }
+}

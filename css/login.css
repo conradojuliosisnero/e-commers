@@ -1,0 +1,106 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+body ::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #bce5be; /* Color de la barra de desplazamiento */
+}
+
+.body {
+  width: 100%;
+  height: 100vh;
+  background-color: #d6d6d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-box {
+  display: flex;
+  max-width: 350px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  color: #010101;
+  position: relative;
+  overflow: hidden;
+  /*Button*/
+}
+.form-box .form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  gap: 16px;
+  text-align: center;
+  /*Form text*/
+  /*Inputs box*/
+}
+.form-box .form .title {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #447046;
+}
+.form-box .form .subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+.form-box .form .form-container {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 1rem 0 0.5rem;
+  width: 100%;
+}
+.form-box .form .form-container .input {
+  background: none;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+  padding: 8px 15px;
+}
+.form-box .form .form-section {
+  padding: 16px;
+  font-size: 0.85rem;
+  background-color: #e0ecfb;
+  border-radius: 1em;
+  box-shadow: 0 -1px 8% 0 rgba(0, 0, 0, 0.08);
+}
+.form-box .form .form-section .text {
+  display: flex;
+  max-width: 100%;
+}
+.form-box .form .form-section .text .link {
+  padding-left: 5px;
+  text-decoration: none;
+  color: #447046;
+}
+.form-box button {
+  background-color: #bce5be;
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.form-box button:hover {
+  background-color: #447046;
+}/*# sourceMappingURL=login.css.map */
