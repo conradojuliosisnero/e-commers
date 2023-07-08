@@ -1,9 +1,14 @@
 @import 'variables';
 
 .main{
-    @include caja_grid();
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(325px,1fr));
     .components{
-        @include size(250px,450px);
-        background-color: aqua;
+        width: 350px;
+        height: 350px;
+        background-color: rgb(36, 115, 163);
+        border: solid 2px;
     }
 }
+
+@import "medias";
