@@ -50,6 +50,7 @@ body{
     ::-webkit-scrollbar{
         width:10px ;
     }
+    scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
     width: 10px; /* Ancho del scrollbar */
