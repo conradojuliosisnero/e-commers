@@ -30,8 +30,23 @@ mostrarMenu(abrirMenu);
 
 /////////menu dinamico /////////////
 
-// const menuDinamico = document.getElementById("#header");
+const menuDinamico = document.querySelector(".header");
+let ubicacionPrincipal = window.scrollY;
 
-// const ocualtarMenu = window.screenY(menuDinamico);
+function esconderMenu() {
+        let ubicacionActual = window.scrollY;
+        console.log(ubicacionActual);
+        if (ubicacionActual >= ubicacionPrincipal) {
+            menuDinamico.style.top = "-120px";
+            menuDinamico.style.transition = ".5s";
+        }else{
+            menuDinamico.style.top = "0px";
+            menuDinamico.style.background = "white";
+            menuDinamico.style.transition = ".5s";
+        }
+    
+        ubicacionPrincipal = ubicacionActual;
+}
 
-// console.log(ocultarMenu);
+window.addEventListener('scroll',esconderMenu);
+
