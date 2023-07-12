@@ -24,7 +24,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 7.5rem;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   display: flex;
   align-items: center;
