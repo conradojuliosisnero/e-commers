@@ -51,9 +51,6 @@
 .card__container .carrusel {
   overflow: hidden;
   position: relative;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
 }
 .card__container .carrusel .row {
   z-index: 200;
@@ -96,14 +93,14 @@
 }
 .card__container .card__contend {
   padding: 30px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 30px;
 }
 .card__container .card__contend .card__text {
   position: relative;
