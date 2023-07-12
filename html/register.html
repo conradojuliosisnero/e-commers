@@ -2,41 +2,116 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/register.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Julio cesar conrado" />
+    <meta name="description" content="Ecoomers, esto es un proyecto personal" />
+    <meta name="keywords" content="HTML, CSS, Java Script, Boostrap,Ecoomers " />
+    <!-- link de css  -->
+    <link rel="stylesheet" href="../css/register.css"/>
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;800;900&display=swap"
+      rel="stylesheet" />
+      <!-- font awesome  -->
+      <script src="https://kit.fontawesome.com/43cf05dd1c.js" crossorigin="anonymous"></script>
+      <!-- estilos de boostrap  -->
     <title>Register</title>
 </head>
 <body class="body">
-    <form class="form">
-        <p class="title">Registrate</p>
-        <p class="message">Crea una cuenta para ingresar al sitio. </p>
-            <div class="flex">
-            <label>
-                <input required="" placeholder="" type="text" class="input">
-                <span>Primer Nombre</span>
-            </label>
-    
-            <label>
-                <input required="" placeholder="" type="text" class="input">
-                <span>Segundo Nombre</span>
-            </label>
-        </div>  
-                
-        <label>
-            <input required="" placeholder="" type="email" class="input">
-            <span>Email</span>
-        </label> 
+    <!-- navegador  -->
+    <header class="header">
+        <!-- iconos responsive  -->
+        <div class="icons__responsive">
+        <button class="abrir__menu" id="abrir__menu" onclick="">
+          <span><i onclick="" class="icons fa-solid fa-bars-staggered"></i></span>
+        </button>
+        </div>
+        <div class="header__tittle"><span>E-COMMERCE</span></div>
+        <!-- navegador  -->
+        <nav class="nav">
+        <button class="quitar__menu" id="quitar__menu">
+          <span><i class="icons fa-solid fa-x"></i></span>
+        </button>  
+        <ul class="menu" id="menu">
+          <li class="menu__list"><a href="../index.html">Inicio</a><i class="fa-solid fa-house"></i></li>
+          <li class="menu__list"><a href="tienda.html">Tienda</a><i class="fa-solid fa-tag"></i></li>
+          <li class="menu__list"><a href="carrito.html">Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
+          <li class="menu__list"><a href="#footer">Contacto</a><i class="fa-regular fa-comment"></i></li>
+        </ul>
+        </nav>
+        <!-- boton de login  -->
+        <div class="contend__btnlogin">
+          <button class="button">
+            <a href="html/login.html">Login</a>
+            </button>
+        </div>
+        </header>
+    <!-- form register  -->
+        <main class="container-fluid main">
+            <form class="form">
+                <p class="title">Registrate</p>
+                <p class="message">Crea una cuenta para ingresar al sitio. </p>
+                    <div class="flex">
+                    <label>
+                        <input required="" placeholder="" type="text" class="input">
+                        <span>Primer Nombre</span>
+                    </label>
             
-        <label>
-            <input required="" placeholder="" type="password" class="input">
-            <span>Contraseña</span>
-        </label>
-        <label>
-            <input required="" placeholder="" type="password" class="input">
-            <span>Confirmar Contraseña</span>
-        </label>
-        <button class="submit">Enviar</button>
-        <p class="signin">Ya Tienes una Cuenta? <a href="login.html">Ingresar</a> </p>
-    </form>
+                    <label>
+                        <input required="" placeholder="" type="text" class="input">
+                        <span>Segundo Nombre</span>
+                    </label>
+                </div>  
+                        
+                <label>
+                    <input required="" placeholder="" type="email" class="input">
+                    <span>Email</span>
+                </label> 
+                    
+                <label>
+                    <input required="" placeholder="" type="password" class="input">
+                    <span>Contraseña</span>
+                </label>
+                <label>
+                    <input required="" placeholder="" type="password" class="input">
+                    <span>Confirmar Contraseña</span>
+                </label>
+                <button class="submit">Enviar</button>
+            </form>
+        </main>
+        <!-- footer -->
+        <footer class="footer" id="footer">
+            <div class="contend__listas__footer">
+              <div class="leyenda__footer"><span>Donde Estamos</span></div>
+              <ul class="menus__footer">
+                <li class="list__footer"><a href="#">Direccion</a></li>
+                <li class="list__footer"><a href="#">Mail</a></li>
+                <li class="list__footer"><a href="#">Contacto</a></li>
+                <li class="list__footer"><a href="#">Ayuda</a></li>
+              </ul>
+            </div>
+            <div class="contend__listas__footer">
+              <div class="leyenda__footer"><span>Conocenos</span></div>
+              <ul class="menus__footer">
+                <li class="list__footer"><a href="#">Sobre Nosotros</a></li>
+                <li class="list__footer"><a href="#">Tiendas</a></li>
+                <li class="list__footer"><a href="#">Servicios</a></li>
+                <li class="list__footer"><a href="#">Trabaja con Nosotros</a></li>
+              </ul>
+            </div>
+            <div class="contend__listas__footer">
+              <div class="leyenda__footer"><span>Politicas</span></div>
+              <ul class="menus__footer">
+                <li class="list__footer"><a href="#">Terminos</a></li>
+                <li class="list__footer"><a href="#">Aviso Legal</a></li>
+                <li class="list__footer"><a href="#">Informacion</a></li>
+                <li class="list__footer"><a href="#">Politicas de Privacidad</a></li>
+              </ul>
+            </div>
+          </footer>
+          <!-- scripts  -->
+          <script src="../js/main.js"></script>
+          <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
