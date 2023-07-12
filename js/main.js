@@ -28,14 +28,16 @@ function ocultarMenu() {
 ocultarMenu(cerrarMenu);
 mostrarMenu(abrirMenu);
 
-/////////menu dinamico /////////////
+/////////menu dinamico al hacer scroll/////////////
 
 const menuDinamico = document.querySelector(".header");
-let ubicacionPrincipal = window.scrollY;
+let ubicacionPrincipal = window.scrollY;//ubicacion en 0
 
+    // funcion de esconder el menu 
 function esconderMenu() {
+        //ubicacion al hacer scroll
         let ubicacionActual = window.scrollY;
-        console.log(ubicacionActual);
+        //si la ubicacion en actual es mayor a 0 
         if (ubicacionActual >= ubicacionPrincipal) {
             menuDinamico.style.top = "-120px";
             menuDinamico.style.transition = ".5s";
@@ -44,9 +46,10 @@ function esconderMenu() {
             menuDinamico.style.background = "white";
             menuDinamico.style.transition = ".5s";
         }
-    
+        // ahora la ubicaion en 0 pasa a ser la ubicacion actual 
         ubicacionPrincipal = ubicacionActual;
 }
-
+    // ejecutamos la funcion 
 window.addEventListener('scroll',esconderMenu);
 
+// iconos del menu al hacer scroll 
