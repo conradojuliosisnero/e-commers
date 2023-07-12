@@ -22,23 +22,165 @@ body::-webkit-scrollbar-thumb {
 .body {
   width: 100%;
   height: 100vh;
-  background-color: #e6e6e6;
+  background-image: linear-gradient(to top, #b3ffab 0%, #ffffff 100%);
+}
+.body .header {
+  width: 100%;
+  height: 120px;
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+.body .header:hover {
+  background-color: #FFFFFF;
+}
+.body .header .icons__responsive {
+  display: none;
+}
+.body .header .header__tittle {
+  position: absolute;
+  left: 20px;
+  top: 45px;
+  display: none;
+}
+.body .header .header__tittle span {
+  font-size: 1.2em;
+  color: #447046;
+}
+.body .header .nav {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.body .header .nav .quitar__menu {
+  display: none;
+}
+.body .header .nav .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.body .header .nav .menu .menu__list {
+  display: flex;
+  padding: 0px 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.body .header .nav .menu .menu__list::after {
+  content: "";
+  position: absolute;
+  left: -130px;
+  bottom: 0;
+  background-color: #447046;
+  width: 100%;
+  height: 1px;
+  transition: left 0.4s ease;
+}
+.body .header .nav .menu .menu__list:hover::after {
+  left: 0;
+}
+.body .header .nav .menu .menu__list a {
+  text-decoration: none;
+  color: #447046;
+  position: relative;
+}
+.body .header .nav .menu .menu__list i {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+}
+.body .header .contend__btnlogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+.body .header .contend__btnlogin .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 1em;
+  border: none;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #447046;
+  z-index: 1000;
+  margin: 0px 15px;
+}
+.body .header .contend__btnlogin .button a {
+  text-decoration: none;
+  color: #1b1b1b;
+}
+.body .header .contend__btnlogin .button::before, .body .header .contend__btnlogin .button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #bce5be;
+  transition: 1s ease;
+}
+.body .header .contend__btnlogin .button::before {
+  top: -1em;
+  left: -1em;
+}
+.body .header .contend__btnlogin .button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+.body .header .contend__btnlogin .button:hover::before, .body .header .contend__btnlogin .button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+.body .header .contend__btnlogin .button:hover {
+  color: rgb(10, 25, 30);
+}
+.body .header .contend__btnlogin .button:active {
+  filter: brightness(0.8);
+}
+.body .main {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.form {
+.body .main .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
   max-width: 350px;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   padding: 20px;
   border-radius: 20px;
   position: relative;
+  margin: 50px 0px;
 }
-.form .title {
+.body .main .form .title {
   font-size: 28px;
   color: #447046;
   font-weight: 600;
@@ -48,55 +190,55 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   padding-left: 30px;
 }
-.form .title::before, .form .title::after {
+.body .main .form .title::before, .body .main .form .title::after {
   position: absolute;
   content: "";
   height: 16px;
   width: 16px;
   border-radius: 50%;
   left: 0px;
-  background-color: #bce5be;
+  background-color: #FFFFFF;
 }
-.form .title::before {
+.body .main .form .title::before {
   width: 18px;
   height: 18px;
-  background-color: #bce5be;
+  background-color: #FFFFFF;
 }
-.form .title::after {
+.body .main .form .title::after {
   width: 18px;
   height: 18px;
   animation: pulse 1s linear infinite;
 }
-.form .message, .form .signin {
+.body .main .form .message, .body .main .form .signin {
   color: rgba(88, 87, 87, 0.822);
   font-size: 14px;
 }
-.form .signin {
+.body .main .form .signin {
   text-align: center;
 }
-.form .signin a {
+.body .main .form .signin a {
   color: #447046;
 }
-.form .signin a:hover {
+.body .main .form .signin a:hover {
   -webkit-text-decoration: underline #447046;
           text-decoration: underline #447046;
 }
-.form .flex {
+.body .main .form .flex {
   display: flex;
   width: 100%;
   gap: 6px;
 }
-.form label {
+.body .main .form label {
   position: relative;
 }
-.form label .input {
+.body .main .form label .input {
   width: 80%;
   padding: 10px 10px 20px 10px;
-  outline: 0;
-  border: 1px solid rgba(105, 105, 105, 0.397);
+  outline: none;
+  border: none;
   border-radius: 10px;
 }
-.form label .input + span {
+.body .main .form label .input + span {
   position: absolute;
   left: 10px;
   top: 15px;
@@ -105,23 +247,23 @@ body::-webkit-scrollbar-thumb {
   cursor: text;
   transition: 0.3s ease;
 }
-.form label .input:-moz-placeholder-shown + span {
+.body .main .form label .input:-moz-placeholder-shown + span {
   top: 15px;
   font-size: 0.9em;
 }
-.form label .input:placeholder-shown + span {
+.body .main .form label .input:placeholder-shown + span {
   top: 15px;
   font-size: 0.9em;
 }
-.form label .input:focus + span, .form label .input.valid + span {
+.body .main .form label .input:focus + span, .body .main .form label .input.valid + span {
   top: 30px;
   font-size: 0.7em;
   font-weight: 600;
 }
-.form label .input.valid + span {
+.body .main .form label .input.valid + span {
   color: green;
 }
-.form .submit {
+.body .main .form .submit {
   border: none;
   outline: none;
   background-color: #bce5be;
@@ -133,8 +275,57 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   transition: background-color 0.5s ease;
 }
-.form .submit:hover {
+.body .main .form .submit:hover {
   background-color: #447046;
+}
+.body .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background-color: #ffffff;
+}
+.body .footer .contend__listas__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.body .footer .contend__listas__footer .leyenda__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.body .footer .contend__listas__footer .leyenda__footer span {
+  display: flex;
+  color: #a2a2a2;
+}
+.body .footer .contend__listas__footer .menus__footer {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+}
+.body .footer .contend__listas__footer .menus__footer .list__footer {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 2px 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+}
+.body .footer .contend__listas__footer .menus__footer .list__footer a {
+  text-decoration: none;
+  color: #447046;
+  font-size: 1em;
+  font-weight: 300;
+}
+.body .footer .contend__listas__footer .menus__footer .list__footer a:hover {
+  -webkit-text-decoration: underline 1px;
+          text-decoration: underline 1px;
 }
 
 @keyframes pulse {

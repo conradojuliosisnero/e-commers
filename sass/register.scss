@@ -13,129 +13,267 @@ $submit-hover-bg-color: rgb(56, 90, 194);
 .body{
     width: 100%;
     height: 100vh;
-    background-color: #e6e6e6;
-    @include caja_flex(flex,center,center);
+    background-image: linear-gradient(to top, #b3ffab 0%, #ffffff 100%);
+    .header {
+      width: 100%;
+      height: 120px;
+      background-color: $color-white;
+      position: relative;
+      z-index: 100;
+      @include caja_flex(flex, center, center);
+      justify-content: space-around;
+      &:hover{
+        background-color: $color-white;
+      }
+      .icons__responsive {
+        display: none;
+      }
+      .header__tittle{
+        position:absolute;
+        left: 20px;
+        top: 45px;
+        display: none;
+        span{
+          font-size: 1.2em;
+          color: $color-green-litgh;
+        }
+      }
+      .nav {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        @include caja_flex(flex, center, center);
+        position: relative;
+        .quitar__menu {
+          display: none;
+        }
+        .menu {
+          @include caja_flex(flex, center, center);
+          list-style: none;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          .menu__list {
+            display: flex;
+            padding: 0px 1.25rem;
+            position: relative;
+            overflow: hidden;
+            &::after {
+              content: "";
+              position: absolute;
+              left: -130px;
+              bottom: 0;
+              background-color: $color-green-litgh;
+              @include size(100%, 1px);
+              transition: left 0.4s ease;
+            }
+            &:hover::after {
+              left: 0;
+            }
+            a {
+              text-decoration: none;
+              color: $color-green-litgh;
+              position: relative;
+            }
+            i {
+              position: absolute;
+              left: 0;
+              bottom: -30px;
+            }
+          }
+        }
+      }
+      .contend__btnlogin {
+        @include caja_flex(flex, center, center);
+        height: 100%;
+        position: relative;
+        .button {
+          @include caja_flex(flex, center, center);
+          padding: 0.8em 1.7em;
+          background-color: transparent;
+          border-radius: 0.3em;
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+          transition: 0.5s;
+          font-weight: 400;
+          font-size: 1em;
+          border: none;
+          font-family: inherit;
+          text-transform: uppercase;
+          color: $color-green-litgh;
+          z-index: 1000;
+          margin: 0px 15px;
+          a {
+            text-decoration: none;
+            color: $color-black;
+          }
+          &::before,
+          &::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            background-color: $color-green-second;
+            transition: 1s ease;
+          }
+    
+          &::before {
+            top: -1em;
+            left: -1em;
+          }
+    
+          &::after {
+            left: calc(100% + 1em);
+            top: calc(100% + 1em);
+          }
+    
+          &:hover::before,
+          &:hover::after {
+            height: 410px;
+            width: 410px;
+          }
+    
+          &:hover {
+            color: rgb(10, 25, 30);
+          }
+    
+          &:active {
+            filter: brightness(0.8);
+          }
+        }
+      }
+    }
+    .main{
+      @include caja_flex(flex,center,center);
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        max-width: $form-max-width;
+        background-color:rgb(0, 0, 0,.1);
+        backdrop-filter: blur(15px);
+        padding: 20px;
+        border-radius: $form-border-radius;
+        position: relative;
+        margin: 50px 0px;
+        .title {
+          font-size: 28px;
+          color: $color-green-litgh;
+          font-weight: 600;
+          letter-spacing: -1px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding-left: 30px;
+          
+          &::before, &::after {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            left: 0px;
+            background-color: $color-white;
+          }
+          
+          &::before {
+            width: 18px;
+            height: 18px;
+            background-color: $color-white;
+          }
+          
+          &::after {
+            width: 18px;
+            height: 18px;
+            animation: pulse 1s linear infinite;
+          }
+        }
+        
+        .message, .signin {
+          color: $message-color;
+          font-size: 14px;
+        }
+        
+        .signin {
+          text-align: center;
+          
+          a {
+            color: $color-green-litgh;
+            
+            &:hover {
+              text-decoration: underline $color-green-litgh;
+            }
+          }
+        }
+        
+        .flex {
+          display: flex;
+          width: 100%;
+          gap: 6px;
+        }
+        
+        label {
+          position: relative;
+          
+          .input {
+            width: 80%;
+            padding: 10px 10px 20px 10px;
+            outline: none;
+            border:none;
+            border-radius: 10px;
+            
+            & + span {
+              position: absolute;
+              left: 10px;
+              top: 15px;
+              color: grey;
+              font-size: 0.9em;
+              cursor: text;
+              transition: 0.3s ease;
+            }
+            
+            &:placeholder-shown + span {
+              top: 15px;
+              font-size: 0.9em;
+            }
+            
+            &:focus + span, &.valid + span {
+              top: 30px;
+              font-size: 0.7em;
+              font-weight: 600;
+            }
+            
+            &.valid + span {
+              color: $valid-input-color;
+            }
+          }
+        }
+        
+        .submit {
+          border: none;
+          outline: none;
+          background-color: $color-green-second;
+          padding: 10px;
+          border-radius: 10px;
+          color: #fff;
+          font-size: 16px;
+          transform: .3s ease;
+          cursor: pointer;
+          transition:background-color .5s ease ;
+          &:hover {
+            background-color: $color-green-litgh;
+          }
+        }
+      }
+    }
+    @import "footer";
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: $form-max-width;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: $form-border-radius;
-  position: relative;
-  
-  .title {
-    font-size: 28px;
-    color: $color-green-litgh;
-    font-weight: 600;
-    letter-spacing: -1px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-    
-    &::before, &::after {
-      position: absolute;
-      content: "";
-      height: 16px;
-      width: 16px;
-      border-radius: 50%;
-      left: 0px;
-      background-color: $color-green-second;
-    }
-    
-    &::before {
-      width: 18px;
-      height: 18px;
-      background-color: $color-green-second;
-    }
-    
-    &::after {
-      width: 18px;
-      height: 18px;
-      animation: pulse 1s linear infinite;
-    }
-  }
-  
-  .message, .signin {
-    color: $message-color;
-    font-size: 14px;
-  }
-  
-  .signin {
-    text-align: center;
-    
-    a {
-      color: $color-green-litgh;
-      
-      &:hover {
-        text-decoration: underline $color-green-litgh;
-      }
-    }
-  }
-  
-  .flex {
-    display: flex;
-    width: 100%;
-    gap: 6px;
-  }
-  
-  label {
-    position: relative;
-    
-    .input {
-      width: 80%;
-      padding: 10px 10px 20px 10px;
-      outline: 0;
-      border: 1px solid $input-border-color;
-      border-radius: 10px;
-      
-      & + span {
-        position: absolute;
-        left: 10px;
-        top: 15px;
-        color: grey;
-        font-size: 0.9em;
-        cursor: text;
-        transition: 0.3s ease;
-      }
-      
-      &:placeholder-shown + span {
-        top: 15px;
-        font-size: 0.9em;
-      }
-      
-      &:focus + span, &.valid + span {
-        top: 30px;
-        font-size: 0.7em;
-        font-weight: 600;
-      }
-      
-      &.valid + span {
-        color: $valid-input-color;
-      }
-    }
-  }
-  
-  .submit {
-    border: none;
-    outline: none;
-    background-color: $color-green-second;
-    padding: 10px;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 16px;
-    transform: .3s ease;
-    cursor: pointer;
-    transition:background-color .5s ease ;
-    &:hover {
-      background-color: $color-green-litgh;
-    }
-  }
-}
 
 @keyframes pulse {
   from {
