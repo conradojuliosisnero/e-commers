@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 725px) {
+  body {
+    background-color: hsl(30, 38%, 92%);
+  }
+  body .main .card__container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    height: 600px;
+  }
+  body .main .card__container .card__img {
+    width: 100%;
+  }
+  body .main .card__container .card__img .img1 {
+    display: none;
+  }
+  body .main .card__container .card__img .img2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  body .main .card__container .card__contend {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    margin-bottom: 20px;
+  }
+  body .main .card__container .card__contend .card__btn span {
+    font-size: 14px;
+  }
+}
+.card__container {
+  display: flex;
+  padding: 20px;
+  width: 700px;
+  position: relative;
+}
+.card__container .carrusel {
+  overflow: hidden;
+  position: relative;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.card__container .carrusel .row {
+  z-index: 200;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  top: 50%;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.card__container .carrusel .row.left {
+  left: 20px;
+  background-color: transparent;
+  border: solid 2px white;
+  border-top: none;
+  border-right: none;
+}
+.card__container .carrusel .row.right {
+  right: 20px;
+  background-color: transparent;
+  border: solid 2px white;
+  border-left: none;
+  border-bottom: none;
+}
+.card__container .carrusel .card__img {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+.card__container .carrusel .card__img .img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__container .card__contend {
+  padding: 30px;
+  background-color: hsl(0, 0%, 100%);
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 30px;
+}
+.card__container .card__contend .card__text {
+  position: relative;
+}
+.card__container .card__contend .card__text .leyend {
+  width: 100%;
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 0px 0px 20px 0px;
+}
+.card__container .card__contend .card__text .tittle {
+  padding: 0px 0px;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+.card__container .card__contend .card__text .text {
+  padding: 20px 0px;
+  line-height: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+}
+.card__container .card__contend .card__price {
+  width: 100%;
+  display: flex;
+}
+.card__container .card__contend .card__price .card__price-one {
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", serif;
+  font-size: 30px;
+}
+.card__container .card__contend .card__price .card__price-tho {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  display: flex;
+  align-items: center;
+  padding: 0px 25px;
+  justify-content: flex-start;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+.card__container .card__contend .card__btn {
+  margin-top: 20px;
+  width: 100%;
+  background-color: hsl(158, 36%, 37%);
+  border-radius: 7px;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+}
+.card__container .card__contend .card__btn:hover {
+  background-color: hsl(158, 35%, 28%);
+}
+.card__container .card__contend .card__btn span {
+  color: hsl(0, 0%, 100%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  padding: 10px;
+}/*# sourceMappingURL=card.css.map */
