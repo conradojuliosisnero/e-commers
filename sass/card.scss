@@ -8,9 +8,6 @@
         .carrusel{
             overflow: hidden;
             position: relative;
-            border-top-right-radius: 0px;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
             .row{
                 z-index: 200;
                 position: absolute;
@@ -53,14 +50,13 @@
 
         .card__contend{
             padding: 30px;
-            background-color: $clr-white;  
+            background-color: rgb(0,0,0,.1);  
+            backdrop-filter: blur(15px);
             width: 80%;
             display: flex;
             align-items: center;
             justify-content: space-around;
             flex-direction: column;
-            border-bottom-right-radius: 20px;
-            border-top-right-radius: 30px;
             .card__text{
                 position: relative;
                 .leyend{

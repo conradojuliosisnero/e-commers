@@ -7,26 +7,18 @@
 }
 
 // typography
-
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
-
 $font1: "Fraunces", serif;
 $font2: "Montserrat", sans-serif;
-
 // colors
-
 // primary
 $clr-darkcyan: hsl(158, 36%, 37%);
 $clr-cream: hsl(30, 38%, 92%);
-
 // neutral
 $clr-Verydarkblue: hsl(212, 21%, 14%);
 $clr-Darkgrayishblue: hsl(228, 12%, 48%);
 $clr-white: hsl(0, 0%, 100%);
-
 // font size
 $paragraf: 14px;
-
 // mediaquerys movile
 @media screen and (max-width: 725px) {
   body {
