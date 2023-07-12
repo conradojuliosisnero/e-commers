@@ -70,6 +70,9 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     width: 100%;
   }
+  body .header .header__tittle {
+    display: none;
+  }
   body .header .icons__responsive {
     display: flex;
     right: 0;

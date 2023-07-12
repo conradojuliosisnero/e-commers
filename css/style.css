@@ -264,6 +264,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 300px;
   position: relative;
+  background-color: #ffffff;
 }
 .footer .contend__listas__footer {
   display: flex;
@@ -349,6 +350,9 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     position: relative;
     width: 100%;
+  }
+  body .header .header__tittle {
+    display: none;
   }
   body .header .icons__responsive {
     display: flex;
