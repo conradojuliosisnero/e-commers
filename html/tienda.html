@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/card.css">
     <link rel="stylesheet" href="../css/tienda.css">
     <title>Tienda</title>
 </head>
@@ -22,9 +23,9 @@
           <span><i class="icons fa-solid fa-x"></i></span>
         </button>  
         <ul class="menu" id="menu">
-          <li class="menu__list"><a href="#">Home</a><i class="fa-solid fa-house"></i></li>
+          <li class="menu__list"><a href="../index.html">Home</a><i class="fa-solid fa-house"></i></li>
           <li class="menu__list"><a href="#">Products</a><i class="fa-solid fa-tag"></i></li>
-          <li class="menu__list"><a href="#">Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
+          <li class="menu__list"><a href="carrito.html">Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
           <li class="menu__list"><a href="#">Contac</a><i class="fa-regular fa-comment"></i></li>
         </ul>
         </nav>
@@ -35,12 +36,39 @@
             </button>
         </div>
     </header>
-    <main class="main">
-        <div class="components"></div>
-        <div class="components"></div>
-        <div class="components"></div>
-        <div class="components"></div>
-        <div class="components"></div>
+    <main class="container-fluid main">
+      <div class="card__container">
+        <div class="carrusel">
+          <span class="row right" id="flechaizquierda"></span>
+          <span class="row left" id="flechaderecha"></span>
+          <div class="card__img">
+            <img class="img" name="imagen" src="images/image-product-desktop.jpg">
+            <img class="img" name="imagen" src="images/imagen1.jpg">
+            <img class="img" name="imagen" src="images/imagen2.jpg">
+            <img class="img" name="imagen" src="images/imagen3.jpg">
+          </div>
+        </div>
+        <div class="card__contend">
+          <div class="card__text">
+            <div class="leyend">
+            <span>P E R F U M E</span>
+            </div>
+            <h1 class="tittle">Gabrielle Essence Eau De Parfum</h1>
+            <p class="text">
+              A floral, solar and voluptuous interpretation composed by Olivier
+              Polge, Perfumer-Creator for the House of CHANEL.
+            </p>
+          </div>
+          <div class="card__price">
+          <span class="card__price-one">$149.99</span>
+          <span class="card__price-tho">$169.99</span>
+        </div>
+        <button class="card__btn">
+          <span>Add to Cart</span>
+        </button>
+        </div>
+      </div>
+ 
     </main>
         <!-- footer  -->
     <footer class="footer">
@@ -72,5 +100,6 @@
               </ul>
             </div>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>
