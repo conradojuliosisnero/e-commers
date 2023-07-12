@@ -63,6 +63,10 @@
       display: flex;
       position: relative;
       width: 100%;
+      // titulo del header 
+      .header__tittle{
+        display: none;
+      }
       // iconos responsivos
       .icons__responsive {
         display: flex;

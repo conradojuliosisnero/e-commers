@@ -1,69 +1,210 @@
+  // variables generales 
 @import "variables";
 
+//  cuerpo del sitio 
 .body{
+  width: 100%;
+  background-image: linear-gradient(to top, #9be15d 0%, #00e3ae 100%);
+  background-repeat: no-repeat;
+  background-size:contain;
+  margin: 0;
+  padding: 0;
+  .header {
     width: 100%;
-    height: 100vh;
-    background-color: #d6d6d6;
-    @include caja_flex(flex,center,center);
-}
-
-.form-box {
-    display: flex;
-    max-width: 350px;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 16px;
-    color: #010101;
-    position:relative;
-    overflow: hidden;
-    // formulario
-    .form {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      padding: 32px 24px 24px;
-      gap: 16px;
-      text-align: center;
-  
-      /*Form text*/
-      .title {
-        font-weight: bold;
-        font-size: 1.6rem;
+    height: 120px;
+    background-color: $color-white;
+    position: relative;
+    z-index: 100;
+    @include caja_flex(flex, center, center);
+    justify-content: space-around;
+    &:hover{
+      background-color: $color-white;
+    }
+    .icons__responsive {
+      display: none;
+    }
+    .header__tittle{
+      position:absolute;
+      left: 20px;
+      top: 45px;
+      display: none;
+      span{
+        font-size: 1.2em;
         color: $color-green-litgh;
       }
-  
-      .subtitle {
-        font-size: 1rem;
-        color: #666;
+    }
+    .nav {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      @include caja_flex(flex, center, center);
+      position: relative;
+      .quitar__menu {
+        display: none;
       }
-  
-      /*Inputs box*/
-      .form-container {
-        overflow: hidden;
-        border-radius: 8px;
-        background-color: #fff;
-        margin: 1rem 0 0.5rem;
-        width: 100%;
-  
-        .input {
-          background: none;
-          border: 0;
-          outline: 0;
-          height: 40px;
-          width: 100%;
-          border-bottom: 1px solid #eee;
-          font-size: 0.9rem;
-          padding: 8px 15px;
+      .menu {
+        @include caja_flex(flex, center, center);
+        list-style: none;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        .menu__list {
+          display: flex;
+          padding: 0px 1.25rem;
+          position: relative;
+          overflow: hidden;
+          &::after {
+            content: "";
+            position: absolute;
+            left: -130px;
+            bottom: 0;
+            background-color: $color-green-litgh;
+            @include size(100%, 1px);
+            transition: left 0.4s ease;
+          }
+          &:hover::after {
+            left: 0;
+          }
+          a {
+            text-decoration: none;
+            color: $color-green-litgh;
+            position: relative;
+          }
+          i {
+            position: absolute;
+            left: 0;
+            bottom: -30px;
+          }
         }
       }
+    }
+    .contend__btnlogin {
+      @include caja_flex(flex, center, center);
+      height: 100%;
+      position: relative;
+      .button {
+        @include caja_flex(flex, center, center);
+        padding: 0.8em 1.7em;
+        background-color: transparent;
+        border-radius: 0.3em;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.5s;
+        font-weight: 400;
+        font-size: 1em;
+        border: none;
+        font-family: inherit;
+        text-transform: uppercase;
+        color: $color-green-litgh;
+        z-index: 1000;
+        margin: 0px 15px;
+        a {
+          text-decoration: none;
+          color: $color-black;
+        }
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 50px;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          border-radius: 50%;
+          z-index: -1;
+          background-color: $color-green-second;
+          transition: 1s ease;
+        }
+  
+        &::before {
+          top: -1em;
+          left: -1em;
+        }
+  
+        &::after {
+          left: calc(100% + 1em);
+          top: calc(100% + 1em);
+        }
+  
+        &:hover::before,
+        &:hover::after {
+          height: 410px;
+          width: 410px;
+        }
+  
+        &:hover {
+          color: rgb(10, 25, 30);
+        }
+  
+        &:active {
+          filter: brightness(0.8);
+        }
+      }
+    }
+  }
+  .login{
+    @include caja_flex(flex,center,center);
+    width: 100%;
+    padding: 50px 0px;
+    .form-box {
+      display: flex;
+      max-width: 350px;
+      background: rgb(255, 255, 255);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: .7em;
+      color: #010101;
+      position:relative;
+      overflow: hidden;
+      margin:90px 0px;
+      // formulario
+      .form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 32px 24px 24px;
+        gap: 16px;
+        text-align: center;
+        
+        /*Form text*/
+        .title {
+          font-weight: bold;
+          font-size: 1.6rem;
+          color: $color-green-litgh;
+        }
+        
+        .subtitle {
+          font-size: 1rem;
+          color: #666;
+        }
+        
+        /*Inputs box*/
+        .form-container {
+          border-radius: 8px;
+          background-color: transparent;
+          margin: 1rem 0 0.5rem;
+          width: 100%;
+          
+          .input {
+            background:none;
+            border: none;
+            outline: none;
+            height: 40px;
+            width: 100%;
+            border-bottom: 2px solid $color-green-second;
+            font-size: 0.9rem;
+            padding: 8px 10px;
+          }
+        }
         // texto de registro       
-      .form-section {
-        padding: 16px;
-        font-size: 0.85rem;
-        background-color: #e0ecfb;
-        border-radius: 1em;
-        box-shadow: 0 -1px 8% 0 rgba(0, 0, 0, 0.08);
-        .text{
+        .form-section {
+          padding: 16px;
+          font-size: 0.85rem;
+          background-color: #e0ecfb;
+          border-radius: 1em;
+          box-shadow: 0 -1px 8% 0 rgba(0, 0, 0, 0.08);
+          .text{
             display: flex;
             max-width: 100%;
             .link{
@@ -72,9 +213,9 @@
               color: $color-green-litgh;
             }
           }
-  
+          
         }
-    }
+      }
       /*Button*/
       button {
         background-color: $color-green-second;
@@ -82,14 +223,234 @@
         border: 0;
         border-radius: 24px;
         padding: 10px 16px;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-  
-        &:hover {
-          background-color: $color-green-litgh;
+          font-size: 1rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          
+          &:hover {
+            background-color: $color-green-litgh;
+          }
+        }
+      }
+  }
+  }
+  // footer 
+  @import "footer";
+
+  @media screen and (max-width: 1024px) {
+    body {
+      .nav {
+        .btn__login {
+          border: solid 2px $color-white;
+          right: 10px;
         }
       }
     }
+  }
+  
+  @media screen and (max-width: 775px) {
+    body {
+      .nav {
+        // boton de login 
+        .btn__login {
+          border: solid 2px $color-white;
+          right: 10px;
+          z-index: 33000;
+        }
+      }
+  
+      .banner__principal {
+        // ceontenedor de banners 
+        .content__btn {
+          flex-direction: column;
+          // bonotes del banners 
+          .btn__banner {
+            margin: 7px 0px;
+            border: solid $color-white 1px;
+          }
+        }
+      }
+  
+      .footer {
+        flex-wrap: wrap;
+        // contenedores
+        .contend__listas__footer {
+          padding: 30px 0px;
+          justify-content: flex-start;
+          width: 100%;
+          // titulos de menus 
+          .leyenda__footer {
+            justify-content: flex-start;
+            width: 100%;
+            padding: 0px 10px;
+          }
+          // menus 
+          .menus__footer {
+            width: 100%;
+            padding: 0;
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 725px) {
+    body {
+      // contenedor del navegador
+      .header {
+        display: flex;
+        position: relative;
+        width: 100%;
+        // titulo del header 
+        .header__tittle{
+          display: none;
+        }
+        // iconos responsivos
+        .icons__responsive {
+          display: flex;
+          right: 0;
+          position: absolute;
+          left: 0;
+          //icono de abrir menu
+          .abrir__menu {
+            display: flex;
+            left: 1px;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+  
+            z-index: 100;
+            &.inactivo {
+              visibility: hidden;
+            }
+          }
+          // estilos generales de los iconos
+          .icons {
+            font-size: 1.7em;
+            color: $color-green-litgh;
+            cursor: pointer;
+          }
+        }
+        // navegador
+        .nav {
+          visibility: hidden;
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 50%;
+          height: 100%;
+          transition: visibility .5s ease;
+          // menu 
+          .menu {
+            visibility: hidden;
+            .menu__list {
+              padding: 25px 30px;
+            }
+          }
+          // estado activo del menu 
+          &.active {
+            @include caja_flex(flex, center, center);
+            visibility: visible;
+            width: 50%;
+            flex-direction: column;
+            background-color: rgb(0, 0,0,.1);
+            backdrop-filter: blur(5px);
+            flex-direction: column;
+            left: 0;
+            top: 0;
+            height: 100%;
+            position: fixed;
+            z-index: 200;
+            animation: mostrarMenu 350ms ease-in-out both;
+            // menu 
+            .menu {
+              visibility: visible;
+              flex-direction: column;
+              .menu__list {
+                padding: 25px 30px;
+                a{
+                  color: $color-white;
+                }
+              }
+            }
+            // btn quitar menu 
+            .quitar__menu{
+              color: $color-white;
+              background-color: transparent;
+              font-size: 1.4em;
+              padding: 0px 10px;
+  
+            }
+          }
+          // icono responsive de quitar el menu 
+          .quitar__menu {
+            visibility: hidden;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            position: absolute;
+            top: 40px;
+            left: 15px;
+            &.activo {
+              display: block;
+              z-index: 20000;
+              visibility: visible;
+            }
+          }
+        }
+  
+        // animaciones
+        @keyframes mostrarMenu {
+          from{opacity: 0;}
+          to{opacity: 1;}
+        } 
+        @keyframes quitarMenu {
+        from{opacity: 1;}
+        to{opacity: 0;}
+        }
+  
+        // boton de login 
+        .contend__btnlogin{
+          position: absolute;
+          right: 0;
+        }
+      }
+      // contenido
+      .banner__principal {
+        .content__btn {
+          flex-direction: column;
+          // botones del banner
+          .btn__banner {
+            margin: 7px 0px;
+          }
+        }
+      }
+      // pie de pagina
+      .footer {
+        flex-wrap: wrap;
+        // contenedores 
+        .contend__listas__footer {
+          padding: 30px 0px;
+          justify-content: flex-start;
+          width: 100%;
+          // titulos del menus 
+          .leyenda__footer {
+            justify-content: flex-start;
+            padding: 0px 0px 0px 10px;
+            span {
+              padding: 0;
+            }
+          }
+          // menus 
+          .menus__footer {
+            width: 100%;
+            padding: 0;
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
   
