@@ -255,6 +255,43 @@ body::-webkit-scrollbar-thumb {
   background-image: url(../img/img-4.jpg);
 }
 
+.btn__up {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+  z-index: 20000;
+  opacity: 0;
+}
+.btn__up .btnUno {
+  width: 90px;
+  height: 90px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: #bce5be;
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+}
+.btn__up .btnUno a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+.btn__up .btnDos {
+  width: 90px;
+  height: 90px;
+  display: none;
+  border-radius: 50%;
+  background-color: #bce5be;
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -463,22 +500,37 @@ body::-webkit-scrollbar-thumb {
   body .banner__principal .content__btn .btn__banner {
     margin: 7px 0px;
   }
-  body .footer {
+  body .banner__principal .btn__up {
+    display: flex;
+    justify-content: end;
+  }
+  body .banner__principal .btn__up .btnUno {
+    width: 70px;
+    height: 70px;
+    right: 10px;
+  }
+  body .banner__principal .btn__up .btnUno a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+  body .banner__principal .footer {
     flex-wrap: wrap;
   }
-  body .footer .contend__listas__footer {
+  body .banner__principal .footer .contend__listas__footer {
     padding: 30px 0px;
     justify-content: flex-start;
     width: 100%;
   }
-  body .footer .contend__listas__footer .leyenda__footer {
+  body .banner__principal .footer .contend__listas__footer .leyenda__footer {
     justify-content: flex-start;
     padding: 0px 0px 0px 10px;
   }
-  body .footer .contend__listas__footer .leyenda__footer span {
+  body .banner__principal .footer .contend__listas__footer .leyenda__footer span {
     padding: 0;
   }
-  body .footer .contend__listas__footer .menus__footer {
+  body .banner__principal .footer .contend__listas__footer .menus__footer {
     width: 100%;
     padding: 0;
     justify-content: flex-start;
