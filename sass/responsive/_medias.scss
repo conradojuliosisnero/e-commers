@@ -186,6 +186,21 @@
           margin: 7px 0px;
         }
       }
+      .btn__up{
+        display: flex;
+        justify-content: end;
+        .btnUno{
+            width:70px;
+            height: 70px;
+            right:10px;
+            a{
+                text-decoration: none;
+                color: $color-white;
+                font-size: .8em;
+                font-weight: 300;
+            }
+            }   
+
     }
     // pie de pagina
     .footer {
@@ -212,4 +227,5 @@
       }
     }
   }
+}
 }
