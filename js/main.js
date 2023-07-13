@@ -46,10 +46,49 @@ function esconderMenu() {
             menuDinamico.style.background = "white";
             menuDinamico.style.transition = ".5s";
         }
+
         // ahora la ubicaion en 0 pasa a ser la ubicacion actual 
         ubicacionPrincipal = ubicacionActual;
 }
     // ejecutamos la funcion 
 window.addEventListener('scroll',esconderMenu);
 
-// iconos del menu al hacer scroll 
+// cambio de color de las letras del inicio
+
+const leyendaUno = document.querySelector(".leyenda__uno");
+const leyendaDos = document.querySelector(".leyenda__dos");
+const leyendaTres = document.querySelector(".leyenda__tres");
+
+function cambioColor() {
+        let ubicacion = window.scrollY;
+        if (ubicacion >= 200) {
+            leyendaUno.style.color = '#e6bd4c';
+            leyendaDos.style.color = '#fa5ba5';
+            leyendaTres.style.color = '#a8f8ff';
+        } else {
+            leyendaUno.style.color = '';
+            leyendaDos.style.color = '';
+            leyendaTres.style.color = '';
+        }
+    }
+
+    window.addEventListener('scroll',cambioColor);
+
+    // boton de subir 
+    const btnUp = document.querySelector(".btn__up");
+
+    function mostrarbtn() {
+        let ubicacion = window.scrollY;
+        console.log(ubicacion)
+        if(ubicacion >= 700){
+            btnUp.style.opacity = "1";
+            btnUp.style.transition = ".3s";
+            btnUp.style.transform = "translateY(-20px)";
+        }else{
+            btnUp.style.opacity = "0";
+            btnUp.style.transition = ".3s";
+            btnUp.style.transform = "translateY(20px)";
+        }
+    }
+
+    window.addEventListener('scroll',mostrarbtn);
