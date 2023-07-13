@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Julio cesar conrado" />
-  <meta name="description" content="Ecoomers, esto es un proyecto personal" />
-  <meta name="keywords" content="HTML, CSS, Java Script, Boostrap,Ecoomers " />
-  <!-- link de css  -->
-  <link rel="stylesheet" href="css/style.css"/>
-  <!-- google fonts  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;800;900&display=swap"
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Julio cesar conrado" />
+    <meta name="description" content="Ecoomers, esto es un proyecto personal" />
+    <meta name="keywords" content="HTML, CSS, Java Script, Boostrap,Ecoomers " />
+    <!-- link de css  -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- google fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;800;900&display=swap"
     rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- font awesome  -->
     <script src="https://kit.fontawesome.com/43cf05dd1c.js" crossorigin="anonymous"></script>
-    <!-- estilos de boostrap  -->
   <title>E-COMMERCE</title>
 </head>
 
@@ -40,6 +39,7 @@
       <li class="menu__list"><a href="html/carrito.html">Carrito</a><i class="fa-solid fa-cart-shopping"></i></li>
       <li class="menu__list"><a href="#footer">Contacto</a><i class="fa-regular fa-comment"></i></li>
     </ul>
+
     </nav>
     <!-- boton de login  -->
     <div class="contend__btnlogin">
@@ -50,7 +50,7 @@
     </header>
     
   <!-- seccion 1 -->
-  <section class="banner__principal uno">
+  <section class="banner__principal uno"  id="btn__up">
 
     <!-- texto del banner  -->
     <span class="leyenda__uno">VISTE CASUAL Y A LA MODA</span>
@@ -63,6 +63,10 @@
       <button class="btn__banner">
         <span><a href="#">Comprar</a></span>
       </button>
+    </div>
+    <div class="btn__up">
+      <button class="btnUno"><a href="#btn__up">subir</a></button>
+      <button class="btnDos">Bajar</button>
     </div>
     </section>
 
@@ -124,9 +128,12 @@
         </div>
       </footer>
 
+
+      <!-- btn up -->
       <!-- scripst de Bootstrap y JS  -->
       <script src="js/main.js"></script>
       <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      
 </body>
 
 </html>
