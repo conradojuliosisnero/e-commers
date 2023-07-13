@@ -1,4 +1,5 @@
-@import 'variables';
+@import '../page_principal/variables';
+
 
 .main{
     position: relative;
@@ -7,4 +8,4 @@
     grid-template-columns: repeat(auto-fit,minmax(350px,1fr))
 }
 
-@import "medias";
+@import '../responsive/medias';

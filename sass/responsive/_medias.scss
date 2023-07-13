@@ -11,6 +11,12 @@
 
 @media screen and (max-width: 775px) {
   body {
+    .header{
+      background-color: aqua;
+      .abrir__menu{
+        background: transparent;
+      }
+    }
     .nav {
       // boton de login 
       .btn__login {
@@ -20,6 +26,8 @@
       }
     }
 
+
+    
     .banner__principal {
       // ceontenedor de banners 
       .content__btn {

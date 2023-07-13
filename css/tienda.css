@@ -33,6 +33,12 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media screen and (max-width: 775px) {
+  body .header {
+    background-color: aqua;
+  }
+  body .header .abrir__menu {
+    background: transparent;
+  }
   body .nav .btn__login {
     border: solid 2px #FFFFFF;
     right: 10px;

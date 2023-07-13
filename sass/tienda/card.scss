@@ -1,5 +1,4 @@
-@import "card_depents";
-
+@import "../page_principal/variables";
     .card__container{
         display: flex;
         padding: 20px;
@@ -61,7 +60,7 @@
                 position: relative;
                 .leyend{
                     width: 100%;
-                    color: $clr-Darkgrayishblue;
+                    // color: $clr-Darkgrayishblue;
                     font-family: $font2;
                     font-weight: 300;
                     font-size: 12px;

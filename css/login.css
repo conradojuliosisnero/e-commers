@@ -19,6 +19,143 @@ body::-webkit-scrollbar-thumb {
   background-color: #bce5be; /* Color de la barra de desplazamiento */
 }
 
+.header {
+  width: 100%;
+  height: 7.5rem;
+  background-color: transparent;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  background-color: #FFFFFF;
+}
+.header .icons__responsive {
+  display: none;
+}
+.header .header__tittle {
+  position: absolute;
+  left: 20px;
+  top: 45px;
+  display: flex;
+}
+.header .header__tittle span {
+  font-size: 1.2em;
+  color: #447046;
+}
+.header .nav {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header .nav .quitar__menu {
+  display: none;
+}
+.header .nav .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.header .nav .menu .menu__list {
+  display: flex;
+  padding: 0px 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.header .nav .menu .menu__list::after {
+  content: "";
+  position: absolute;
+  left: -130px;
+  bottom: 0;
+  background-color: #447046;
+  width: 100%;
+  height: 1px;
+  transition: left 0.4s ease;
+}
+.header .nav .menu .menu__list:hover::after {
+  left: 0;
+}
+.header .nav .menu .menu__list a {
+  text-decoration: none;
+  color: #447046;
+  position: relative;
+}
+.header .nav .menu .menu__list i {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+}
+.header .contend__btnlogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+.header .contend__btnlogin .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 1em;
+  border: none;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #447046;
+  z-index: 1000;
+  margin: 0px 15px;
+}
+.header .contend__btnlogin .button a {
+  text-decoration: none;
+  color: #1b1b1b;
+}
+.header .contend__btnlogin .button::before, .header .contend__btnlogin .button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #bce5be;
+  transition: 1s ease;
+}
+.header .contend__btnlogin .button::before {
+  top: -1em;
+  left: -1em;
+}
+.header .contend__btnlogin .button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+.header .contend__btnlogin .button:hover::before, .header .contend__btnlogin .button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+.header .contend__btnlogin .button:hover {
+  color: rgb(10, 25, 30);
+}
+.header .contend__btnlogin .button:active {
+  filter: brightness(0.8);
+}
+
 .body {
   width: 100%;
   background-image: linear-gradient(to top, #9be15d 0%, #00e3ae 100%);
@@ -342,9 +479,8 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 725px) {
   body .header {
-    display: flex;
+    display: none;
     position: relative;
-    width: 100%;
   }
   body .header .header__tittle {
     display: none;
@@ -361,7 +497,6 @@ body::-webkit-scrollbar-thumb {
     border: none;
     outline: none;
     padding: 10px 20px;
-    z-index: 100;
   }
   body .header .icons__responsive .abrir__menu.inactivo {
     visibility: hidden;
@@ -434,31 +569,9 @@ body::-webkit-scrollbar-thumb {
     z-index: 20000;
     visibility: visible;
   }
-  @keyframes mostrarMenu {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes quitarMenu {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
   body .header .contend__btnlogin {
     position: absolute;
     right: 0;
-  }
-  body .banner__principal .content__btn {
-    flex-direction: column;
-  }
-  body .banner__principal .content__btn .btn__banner {
-    margin: 7px 0px;
   }
   body .footer {
     flex-wrap: wrap;
