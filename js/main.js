@@ -58,6 +58,7 @@ window.addEventListener('scroll',esconderMenu);
 const leyendaUno = document.querySelector(".leyenda__uno");
 const leyendaDos = document.querySelector(".leyenda__dos");
 const leyendaTres = document.querySelector(".leyenda__tres");
+const btnBanner = document.querySelectorAll('.btn__banner');
 
 function cambioColor() {
         let ubicacion = window.scrollY;
@@ -65,10 +66,15 @@ function cambioColor() {
             leyendaUno.style.color = '#e6bd4c';
             leyendaDos.style.color = '#fa5ba5';
             leyendaTres.style.color = '#a8f8ff';
+            let botones = btnBanner.forEach(()=>{
+                btnBanner.style.background = '#e6bd4c';
+            })
         } else {
             leyendaUno.style.color = '';
             leyendaDos.style.color = '';
             leyendaTres.style.color = '';
+            // btnBanner.style.background = '';
+
         }
     }
 
