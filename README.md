@@ -1,5 +1,8 @@
 # Ecommerce Challenge: Creando una Tienda en Línea con JSON Server
 
+![image](https://github.com/conradojuliosisnero/e-commers/assets/111514635/af8cf76d-95ea-4613-a62a-d6390605f56f)
+
+
 ¡Bienvenidos al emocionante mundo de mi proyecto de ecommerce! En este desafío personal, he estado trabajando incansablemente durante el último mes para crear una tienda en línea desde cero utilizando JSON Server. Este Readme te proporcionará una visión general de lo que he logrado hasta ahora, los objetivos de mi proyecto y cómo puedes colaborar o seguir el progreso.
 
 ## 🛍️ Descripción del Proyecto
