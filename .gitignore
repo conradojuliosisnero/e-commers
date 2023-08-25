@@ -1,5 +1,5 @@
 # directorios 
-node_modules
+node_modules/
 
 # archivos 
 packaje-lock.json
